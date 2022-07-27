@@ -4,15 +4,16 @@
 body{
     background-color: hsl(212, 45%, 89%);
     font-family: 'Outfit', sans-serif;
-
-}
-
-.container{
-    max-width: 1440px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.container{
+    max-width: 1440px;
+    display: grid;
+    place-items: center;
     height: 100vh;
 }
 

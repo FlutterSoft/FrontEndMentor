@@ -1,0 +1,46 @@
+
+
+*{
+    box-sizing: border-box;
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-color: hsl(30, 38%, 92%);
+    display: grid;
+    place-content: center;
+    height: 100vh;
+    
+}
+
+h1{
+    font-family: 'Fraunces', serif;
+}
+
+p{
+    font-size: 14px;
+}
+
+section{
+    width: 500px;
+    background-color: hsl(0, 0%, 100%);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 13px;
+
+}
+
+section div{
+    padding: 1em;
+    
+}
+.section__img{
+    border: none;
+    background-image: url("./images/image-product-desktop.jpg");
+    background-position: center center;
+    background-size: cover;
+    /* border-radius: 13px; */
+
+}

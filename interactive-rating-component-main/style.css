@@ -16,8 +16,9 @@ body{
 .card{
     background-color:  hsla(213, 20%, 18%, 0.482);
     border-radius: 28px;
-    width: 20em;
-    height: 20em;
+    width: 25em;
+    max-width: 90%;
+    margin: auto;    
     padding: 2em;
 }
 
@@ -47,15 +48,72 @@ p{
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+}
+.circleContainer{
+    height: 2.5em;
+    width: 2.5em;
+    color: hsl(217, 12%, 63%);
+    border-radius: 50%;
+    background-color: rgb(34, 41, 48);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;    
+}
 
+.ratingCircle:hover{
+    background-color: hsl(216, 12%, 54%);
+    color: hsl(217, 15%, 83%);
+}
+
+.active{
+    background-color: hsl(25, 97%, 53%);
+    color: white;
 }
 
 button{
     background-color: hsl(25, 97%, 53%);
     border: none;
     width: 100%;
-    height: 2.8em;
+    height: 3em;
     color: white;
     border-radius: 20px;
     letter-spacing: 2px;
     cursor: pointer;
+}
+button:hover{
+    background-color: hsl(25, 83%, 49%);
+}
+button:active{
+    background-color: white;
+    color:  hsl(25, 97%, 53%);
+}
+
+.hidden{
+    display: none;
+}
+
+#thankYouStateCard{
+    text-align: center;
+}
+
+.imgContainer{
+    height: 7em;
+    display: flex;
+    justify-content: center;
+    margin: 1em auto;
+    text-align: center;
+}
+.selectionContainer{
+    border-radius: 20px;
+    height: 2.2em;
+    width: 18em;
+    margin: 1em auto;
+    padding: 1em;
+    background-color:  hsl(213, 19%, 18%);
+    color: hsl(25, 97%, 53%);
+    display: grid;
+    place-content: center;
+    font-size: 0.9em;
+}

@@ -1,0 +1,130 @@
+:root{
+    --clr-blue: hsl(215, 51%, 70%);
+    --clr-cyan: hsl(178, 100%, 50%);
+    --clr-mainbg:  hsl(217, 54%, 11%);
+    --clr-cardbg: hsl(216, 50%, 16%);
+    --clr-line: hsl(215, 32%, 27%);
+    --clr-white: hsl(0, 0%, 100%);
+}
+
+.attribution { 
+    font-size: 11px; text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+body{
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--clr-mainbg);
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    margin: auto;
+}
+
+p{
+    font-size: 18px;
+}
+
+.card{
+    background-color: var(--clr-cardbg);
+    max-width: 80%;
+    width: 20em;
+    padding: 1.8em;
+    border-radius: 0.5em;
+    display: flex;
+    flex-direction: column;
+}
+
+.card__img{
+    background-image: url("./images/image-equilibrium.jpg");
+    height: 20em;
+    width: 100%;
+    background-position: center center;
+    background-size: contain;
+    background-repeat:no-repeat;
+    border-radius: 0.5em;
+}
+.card__img_overlay{
+    opacity: 0;
+}
+.card__img_img{
+    place-self: center;
+    width: 2em;
+}
+.card__img_overlay{
+    opacity: 0;
+    background-color: hsla(178, 100%, 50%, 0.355);
+    height: 100%;
+    display: grid;
+    cursor: pointer;
+    border-radius: 0.5em;
+    transition: ease 0.4s;
+}
+.card__img_overlay:hover{
+    opacity: 100%;
+}
+
+.card__body a{
+    color: inherit;
+    text-decoration: none;
+}
+.card__body a:hover{
+    color: var(--clr-cyan);
+}
+
+.card__author_img{
+    width: 2em;
+    border-radius: 50%;
+    border: 1px solid var(--clr-blue);
+}
+.card__author a:hover{
+    color: var(--clr-cyan);
+}
+
+.card h4{
+    color: var(--clr-white);
+    font-size: 1.5em;
+}
+
+.card p{
+    color: var(--clr-blue);
+    font-weight: 300;
+}
+
+.card__data{
+    display : flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--clr-line);
+    padding-bottom: 1.5em;
+    margin-bottom: 1.5em;
+    
+}
+.ethSpan{
+    color: var(--clr-cyan);
+    display: flex;
+    align-items: center;
+    gap: 0.3em;
+}
+.daysSpan{
+    color: var(--clr-blue);
+    display: flex;
+    align-items: center;
+    gap: 0.3em;
+    font-weight: 300;
+}
+
+.card__author{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1em;
+}
+.card__author span{
+    color: var(--clr-blue);
+}
+.card__author a{
+    color: var(--clr-white);
+    text-decoration: none;
+}

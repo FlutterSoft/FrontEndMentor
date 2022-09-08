@@ -1,0 +1,17 @@
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+*{
+    box-sizing: border-box;
+}
+
+:root{
+    --clr-primary-text-blue:hsl(238, 29%, 16%) ;
+    --clr-primary-text-red: hsl(14, 88%, 65%) ;
+    --clr-gradient-violet:hsl(273, 75%, 66%) ;
+    --clr-gradient-blue:hsl(240, 73%, 65%) ;
+    --clr-neutral-text-darkblue: hsl(237, 12%, 33%);
+    --clr-neutral-text-blue: hsl(240, 6%, 50%);
+    --clr-divider: hsl(240, 5%, 91%);
+}
+

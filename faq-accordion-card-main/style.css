@@ -15,3 +15,97 @@
     --clr-divider: hsl(240, 5%, 91%);
 }
 
+body{
+    font-family: 'Kumbh Sans', sans-serif;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(var(--clr-gradient-violet), var(--clr-gradient-blue));
+}
+
+.card{
+    width: 800px;
+    height: 450px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: white;
+    border-radius: 18px;
+    padding: 2em;
+    overflow: hidden;
+}
+
+.card__imgContainer{
+
+}
+
+.imgStack{
+    position: relative;
+    left: 50px;
+}
+
+img{
+    width: 100%;
+}
+
+#shadow{
+    position: relative;
+    right: 80px;
+    top: 10px;
+}
+
+#woman{
+    position: relative;
+    bottom: 250px;
+    right: 70px;
+}
+
+
+#orangeBox{
+    width: 100px;
+    position: relative;
+    bottom: 390px;
+    right: 100px;
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+    background-color: transparent;
+    color: #444;
+    cursor: pointer;
+    padding: 18px 0px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    border-bottom: 1px solid var(--clr-divider);
+    font-size: 13px;
+    color: var(--clr-neutral-text-blue);
+  }
+  
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .active, .accordion:hover {
+    background-color: #ccc;
+  }
+  
+  /* Style the accordion panel. Note: hidden by default */
+  .panel {
+    padding: 0 5px;
+    /* background-color: white; */
+    /* display: none; */
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+  }
+
+  .accordion:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+  }

@@ -23,6 +23,9 @@ body{
     background: linear-gradient(var(--clr-gradient-violet), var(--clr-gradient-blue));
 }
 
+h3{
+    font-size: 1.8em;
+}
 .card{
     width: 800px;
     height: 450px;
@@ -30,41 +33,58 @@ body{
     grid-template-columns: 1fr 1fr;
     background-color: white;
     border-radius: 18px;
-    padding: 2em;
-    overflow: hidden;
+    position: relative;
 }
 
 .card__imgContainer{
+    overflow: hidden;
+    position: relative;
+
+}
+.card__questionsContainer{
+    padding: 2em;
 
 }
 
 .imgStack{
     position: relative;
-    left: 50px;
+    top: 50px;
+    left: -60px;
+    width: 400px;
+    /* overflow: hidden; */
 }
+
 
 img{
     width: 100%;
 }
 
 #shadow{
-    position: relative;
-    right: 80px;
-    top: 10px;
+    position: absolute;
+    width: 800px;
+    bottom: -500px;
+    left: -400px;
+
+    /* right:110px;
+    top: 80px; */
 }
 
 #woman{
-    position: relative;
-    bottom: 250px;
-    right: 70px;
+    position: absolute;
+    width: 450px;
+    top: -10px;
+    left: -25px;
+    /* bottom: 250px;
+    right:110px; */
 }
 
 
 #orangeBox{
-    width: 100px;
-    position: relative;
-    bottom: 390px;
-    right: 100px;
+    width: 150px;
+    position: absolute;
+    left: -100px;
+    bottom: 120px;
+    z-index: 99;
 }
 
 /* Style the buttons that are used to open and close the accordion panel */
@@ -72,40 +92,49 @@ img{
     background-color: transparent;
     color: #444;
     cursor: pointer;
-    padding: 18px 0px;
+    padding: 15px 0px 0 0 ;
     width: 100%;
     text-align: left;
     border: none;
     outline: none;
     transition: 0.4s;
-    border-bottom: 1px solid var(--clr-divider);
+    /* border-bottom: 1px solid var(--clr-divider); */
     font-size: 13px;
     color: var(--clr-neutral-text-blue);
   }
   
   /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-  .active, .accordion:hover {
-    background-color: #ccc;
+  .accordion:hover {
+    color: var(--clr-primary-text-red);
   }
-  
+  .active {
+    font-weight: 700;
+    color: var(--clr-primary-text-blue);
+  }
   /* Style the accordion panel. Note: hidden by default */
   .panel {
-    padding: 0 5px;
+    padding: 5px 0;
     /* background-color: white; */
     /* display: none; */
     overflow: hidden;
     max-height: 0;
     transition: max-height 0.2s ease-out;
+    font-size: 0.8em;
+    font-weight: 400;
+    color: var(--clr-neutral-text-blue);
+    border-bottom: 1px solid var(--clr-divider);
+
   }
 
   .accordion:after {
-    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    content: url('./images/icon-arrow-down.svg');
     font-size: 13px;
     color: #777;
     float: right;
-    margin-left: 5px;
+    margin-right: 15px;
   }
   
   .active:after {
-    content: "\2796"; /* Unicode character for "minus" sign (-) */
+    content: url('./images/icon-arrow-down.svg');
+    transform: rotate(180deg);
   }

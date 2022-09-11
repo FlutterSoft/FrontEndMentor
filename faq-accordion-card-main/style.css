@@ -141,8 +141,11 @@ img{
 
   @media screen and (max-width: 900px ) {
     body{
-        margin: 2% auto;
+        padding: 2%;
+        margin: 0 auto;
         max-width: 360px;
+        height: 100vh;
+        background-size: contain;
     }
     .card{
         grid-template-rows: 1fr 4fr;

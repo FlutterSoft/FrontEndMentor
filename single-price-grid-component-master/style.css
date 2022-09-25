@@ -21,7 +21,7 @@ body{
     padding: 2em;
     display: grid;
     place-content: center;
-    height: 100vh;
+    min-height: 100vh;
     font-family: var(--ff-body);
     color: var(--clr-neutral-500);
 }

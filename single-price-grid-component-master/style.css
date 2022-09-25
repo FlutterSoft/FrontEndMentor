@@ -1,3 +1,138 @@
 
+:root{
+    --clr-primary-500: hsl(179, 62%, 43%);
+    --clr-primary-300: hsl(71, 73%, 54%);
+
+    --clr-neutral-500: hsla(218, 22%, 67%);
+    --clr-neutral-200: hsl(204, 43%, 93%);
+
+    --ff-body: 'Karla', sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-size: 16px;
+    background-color: var(--clr-neutral-200);
+    padding: 2em;
+    display: grid;
+    place-content: center;
+    height: 100vh;
+    font-family: var(--ff-body);
+    color: var(--clr-neutral-500);
+}
+
+h1,h2,h3,h4,h5,h6,p{
+    padding: 1em 0;
+}
+
+h3{
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+p{
+    font-weight: 400;
+}
+
+.grid-container{
+    background-color: white;
+    border-radius: 0.4em;
+    box-shadow: 0 0 13px hsla(216, 22%, 67%, 0.351);
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "inner-grid-1st inner-grid-1st"
+    "inner-grid-2nd inner-grid-2nd"
+    "inner-grid-3rd inner-grid-3rd";
+    max-width: 650px;
+}
+
+@media screen and (min-width: 550px) {
+    .grid-container{
+        grid-template-areas: 
+        "inner-grid-1st inner-grid-1st"
+        "inner-grid-2nd inner-grid-3rd";
+    }
+
+}
+.inner-grid{
+    padding: 1.8em 2.3em;
+}
+
+#inner-grid-1st{
+    grid-area: inner-grid-1st;
+}
+#inner-grid-1st h3{
+    color: var(--clr-primary-500);
+}
+
+#inner-grid-2nd{
+    background-color: var(--clr-primary-500);
+    color: var(--clr-neutral-200);
+    grid-area: inner-grid-2nd;
+}
+#inner-grid-2nd p{
+    opacity: 75%;
+}
+
+#inner-grid-3rd{
+    background-color: rgb(107, 187, 187);
+    color: var(--clr-neutral-200);
+    grid-area: inner-grid-3rd;
+
+}
+#inner-grid-3rd ul{
+   list-style: none;
+   color: var(--clr-neutral-200);
+    line-height: 1.5em;
+    font-size: 0.9em;
+    opacity: 75%;
+
+}
+
+#span-guarantee{
+    color: var(--clr-primary-300);
+}
+#span-dollars{
+    font-size: 2em;
+}
+#span-per-month{
+    color: var(--clr-neutral-200);
+    opacity: 50%;
+}
+
+.price-container{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+button{
+    background-color: var(--clr-primary-300);
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    height: 3.7em;
+    color: white;
+    box-shadow: 0 0 13px rgba(111, 122, 141, 0.675);
+    font-size: 1em;
+    margin: 1em 0;
+    cursor:pointer;
+}
+
+button:hover{
+    background-color: hsl(71, 82%, 53%);
+}
+
+button:active{
+    transform: scale(0.98);
+}
+
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }

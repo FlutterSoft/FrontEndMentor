@@ -10,27 +10,31 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
-  <div class="container">
-    <section class="inner-card">
+  <div class="grid-container">
+    <section id="inner-grid-1st" class="inner-grid">
       <h3>Join our community</h3>
-      <h6>  
+      <span id="span-guarantee">  
         30-day, hassle-free money back guarantee
-      </h6>
+      </span>
       <p>
         Gain access to our full library of tutorials along with expert code reviews. 
         Perfect for any developers who are serious about honing their skills.
       </p>
     </section>
-
-    <section class="inner-card">
-      <h4>  
+    
+    <section id="inner-grid-2nd" class="inner-grid">
+      <h3>  
         Monthly Subscription
-      </h4>
+      </h3>
       <div class="price-container">
-        <span>&dollar;</span> 
-        <span>29 per month</span>
+        <span id="span-dollars">&dollar;29</span> 
+        <span id="span-per-month"> per month</span>
       </div>
       <p>  
         Full access for less than &dollar;1 a day
@@ -38,10 +42,10 @@
       <button>Sign Up</button>
     </section>
 
-    <section class="inner-card">
-      <h5>  
+    <section id="inner-grid-3rd" class="inner-grid">
+      <h3>  
         Why Us
-      </h5>
+      </h3>
       <ul>
         <li>  
           Tutorials by industry experts

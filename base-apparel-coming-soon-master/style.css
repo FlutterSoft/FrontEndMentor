@@ -1,0 +1,58 @@
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+*{
+    box-sizing: border-box;
+}
+
+:root{
+
+    --clr-primary-500: hsl(0, 93%, 68%);
+    --clr-primary-300: hsl(0, 36%, 70%);
+    
+    --clr-neutral-500: hsl(0, 6%, 24%);
+    
+    --clr-gradient-1_1: hsl(0, 0%, 100%);
+    --clr-gradient-1_2: hsl(0, 100%, 98%);
+    --clr-gradient-2_1: hsl(0, 80%, 86%);
+    --clr-gradient-2_2: hsl(0, 74%, 74%);
+
+    --ff-body: 'Josefin Sans', sans-serif;
+    --fw-600: 600;
+    --fw-400: 400;
+    --fw-300: 300;
+
+/* 
+    ### Gradients
+- Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%)
+- Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%) */
+
+}
+
+body{
+    font-size: 16px;
+    font-family: var(--ff-body);
+}
+
+.signup{
+    display: flex;
+    height: 2.3em;
+}
+.signup input[type="text"]{
+    border-radius: 50px;
+    border: 1px solid hsla(0, 36%, 70%, 0.369);
+    padding: 0.8em 2em;
+}
+
+.signup button{
+    border-radius: 40px;
+    width: 70px;
+    margin-left: -40px;
+    border: none;
+    background-image: linear-gradient(135deg, var(--clr-gradient-2_1), var(--clr-gradient-2_2));
+}
+::placeholder{
+    color: var(--clr-primary-300);
+    font-weight: var(--fw-500);
+    opacity: 50%;
+}

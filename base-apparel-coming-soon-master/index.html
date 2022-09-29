@@ -15,27 +15,36 @@
 
 </head>
 <body>
-  <header>
-    <img src="./images/logo.svg" alt="">
-  </header>
-  <section>
-    <h3>
-      <span>We're </span>coming soon
-    </h3>
-
-    <p>
-      Hello fellow shoppers! We're currently building our new fashion store. 
-      Add your email below to stay up-to-date with announcements and our launch deals.
-    </p>
+  <div class="container">
+    <header>
+      <img src="./images/logo.svg" alt="">
+    </header>
+    
+    <img id="img-mobile-hero" src="./images/hero-desktop.jpg" alt="">
   
-    <div class="signup">
-      <input type="text" placeholder="Email Address">
-      <button>
-        <img src="./images/icon-arrow.svg" alt=""></button>
-    </div>
-
-  </section>
-  <img id="img-hero" src="./images/hero-desktop.jpg" alt="">
+    <section class="section-coming-soon">
+      <h3>
+        <span>We're </span>coming soon
+      </h3>
+  
+      <p>
+        Hello fellow shoppers! We're currently building our new fashion store. 
+        Add your email below to stay up-to-date with announcements and our launch deals.
+      </p>
+    
+      <form action="#" method="post" id="signup-form">
+        <div class="signup">
+          <input type="email" id="email" required placeholder="Email Address">
+          <button id="btn-submit" type="submit">
+            <img src="./images/icon-arrow.svg" alt="">
+          </button>
+          <span class="validation-message hidden" id="valid-submit">Sign up successful!</span>
+          <span class="validation-message hidden" id="invalid-submit">Invalid email. Please try again</span>
+        </div>
+    </form>
+    </section>
+  </div>
+  
 
   <footer>
     <!-- <p class="attribution">
@@ -43,5 +52,6 @@
       Coded by <a href="#">Your Name Here</a>.
     </p> -->
   </footer>
+  <script src="main.js"></script>
 </body>
 </html>

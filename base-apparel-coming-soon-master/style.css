@@ -3,6 +3,8 @@
 
 *{
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 :root{
@@ -32,7 +34,14 @@
 body{
     font-size: 16px;
     font-family: var(--ff-body);
+    width: 100%;
+    min-height: 100vh;
+    background: url('./images/bg-pattern-desktop.svg'),
+    linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+    background-size:cover;
+    background-position-x: 1rem;
 }
+
 
 section{
     text-align: center;
@@ -42,10 +51,14 @@ section{
 
 h3{
     text-transform: uppercase;
-    font-size: 2.5em;
+    font-size: 3em;
     font-weight: var(--fw-500);
     letter-spacing: 8px;
+    text-align: center;
+    margin-top: 1.7em;
+    margin-bottom: 0.4em;
 }
+
 h3 span{
     font-weight: var(--fw-300);
     color: var(--clr-primary-300);
@@ -54,27 +67,124 @@ h3 span{
 p{
     color: var(--clr-primary-300);
     font-weight: var(--fw-400);
+    line-height: 1.5em;
+}
+
+header{
+    padding: 2.3em;
+    grid-area: content;
+}
+
+#img-mobile-hero{
+    width: 100%;
+    height: 275px;
+    object-fit:cover;
+    object-position: 15% 15%;
+    grid-area: img;
+}
+
+#img-desktop-hero{
+    display: none;
+    grid-area: img;
+}
+.section-coming-soon{
+    padding: 0 1.8em;
+    grid-area: content;
 }
 
 .signup{
-    display: flex;
+    margin-top: 2.5em;
     height: 2.3em;
+    /* display: flex;
+    justify-content: center; */
+    position: relative;
 }
-.signup input[type="text"]{
+
+.signup input[type="email"]{
     border-radius: 50px;
     border: 1px solid hsla(0, 36%, 70%, 0.369);
-    padding: 0.8em 2em;
+    padding: 1em 2em;
+    width: 100%;
+    height: 150%;
+    background-color: inherit;
+}
+.signup input:focus{
+    outline: 0;
 }
 
 .signup button{
-    border-radius: 40px;
-    width: 70px;
-    margin-left: -40px;
-    border: none;
     background-image: linear-gradient(135deg, var(--clr-gradient-2_1), var(--clr-gradient-2_2));
+    border: none;
+    border-radius: 40px;
+    position: absolute;
+    width: 80px;
+    height: 150%;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    box-shadow: 0px 8px 10px hsla(0, 36%, 70%, 0.536);
 }
+.signup button:hover{
+    opacity: 70%;
+}
+.signup button:active{
+    transform: scale(0.98);
+}
+
 ::placeholder{
     color: var(--clr-primary-300);
     font-weight: var(--fw-500);
+    font-size: 1.1em;
     opacity: 50%;
+}
+
+footer{
+    margin-top: 3em;
+    height: 3em;
+}
+
+.validation-message{
+
+}
+#valid-submit{
+    color: rgb(47, 178, 47);
+}
+#invalid-submit{
+    color: var(--clr-primary-500);
+
+}
+.hidden{
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .container{
+        display: grid;
+        grid-template-columns: 60% 40%;
+        grid-template-rows: 10% 90%;
+        grid-template-areas: 
+        "header img"
+        "content img";
+        min-height: 100vh;
+    }
+
+    #img-mobile-hero{
+        min-height: 100%;
+    }
+    
+    .section-coming-soon{
+        text-align: left;
+        padding: 0 4em;
+        margin-top: 8em;
+    }
+    h3{
+        text-align: left;
+    }
+    header{
+        padding: 0 4em;
+    }
+    footer{
+        display: none;
+    }
+
 }

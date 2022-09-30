@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+
+:root{
+    --clr-primary-700: hsl(217, 19%, 35%);
+    --clr-primary-500: hsl(214, 17%, 51%);
+    --clr-primary-300: hsl(212, 23%, 69%);
+    --clr-primary-100: hsl(210, 46%, 95%);
+}
+
+
+body{
+    font-size: 13px;
+    display: grid;
+    place-content: center;
+    padding: 2em;
+    background-color: var(--clr-primary-100);
+    min-height: 100vh;
+    font-family: "Manrope", sans-serif;
+
+}
+h5{
+    color: var(--clr-primary-700);
+    font-weight: 700;
+    font-size: 1.5em;
+    padding: 0;
+    margin: 0;
+}
+
+h6{
+    padding: 0;
+    margin: 0;
+    color: var(--clr-primary-700);
+    font-size: 1em;
+}
+
+p{
+    color: var(--clr-primary-500);
+    line-height: 1.5em;
+}
+
+.card{
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1.5fr;
+    border-radius: 12px;
+}
+#main-image{
+    background-image: url('./images/drawers.jpg');
+    background-size: cover;
+    border-radius: 12px 12px 0 0;
+
+}
+.content{
+    padding: 3em;
+    padding-bottom: 1.5em;
+}
+
+.author{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5%;
+    z-index: 10;
+    position: relative;
+    padding: 0 3em;
+    padding-bottom: 0.5em;
+    border-radius: 0 0 12px 12px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+}
+.author span{
+    padding-top: 0.3em;
+    color: var(--clr-primary-300);
+}
+
+.author-avatar{
+    width: 50px;
+    border-radius: 50%;
+}
+
+.share{
+    height: 2em;
+    width: 30px;
+    border-radius: 50%;
+    padding: 5px;
+    background-color: var(--clr-primary-100);
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+    z-index: 99;
+}
+
+.share:hover{
+    background-color: var(--clr-primary-500);
+}
+
+.share-icon{
+    /* mix-blend-mode:screen; */
+}
+
+.share-bar{
+    background-color: var(--clr-primary-700);
+    padding: 1.5em 0;
+    border-radius: 0 0 12px 12px;
+    z-index: 50;
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    gap: 3em;
+    align-items: center;
+}
+
+.span-share{
+    margin-left: 1.5em;
+    font-size: 1.2em;
+    letter-spacing: 0.2em;
+}
+
+.icons{
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}
+
+.hidden{
+    display: none;
+}
+
+.icons img{
+    cursor: pointer;
+}
+
+.icons img:hover{
+    opacity: 70%;
+}

@@ -84,7 +84,7 @@ p{
 }
 
 .share{
-    height: 2em;
+    height: 30px;
     width: 30px;
     border-radius: 50%;
     padding: 5px;
@@ -93,6 +93,7 @@ p{
     place-content: center;
     cursor: pointer;
     z-index: 99;
+
 }
 
 .share:hover{
@@ -139,4 +140,28 @@ p{
 
 .icons img:hover{
     opacity: 70%;
+}
+
+@media screen and (min-width: 512px){
+        
+    .card{
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr;
+        border-radius: 12px;
+    }
+    .share-bar{
+        border-radius: 0 0 12px 0;
+        height: 50px;
+
+    }
+    #main-image{
+        border-radius: 12px 0 0 12px;
+    }
+    .share{
+        margin-bottom: 5em;
+        position: relative;
+        bottom: -35px;
+    }
+    
+
 }

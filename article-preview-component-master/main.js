@@ -3,3 +3,4 @@ const shareBar = document.querySelector('.share-bar')
 shareButton.addEventListener('click', function(){
     shareBar.classList.toggle('hidden')
 })
+

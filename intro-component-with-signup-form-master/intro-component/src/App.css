@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
-
-
 :root{
   --clr-primary-400: hsl(0, 100%, 74%);
   --clr-primary-200: hsl(154, 59%, 51%);
@@ -11,7 +9,6 @@
 
 }
 
-
 *{
   box-sizing: border-box;
 }
@@ -19,5 +16,86 @@
 body{
   font-size: 16px;
   font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  background-color: var(--clr-primary-400);
 }
 
+.App{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 3em;
+  max-width: 1280px;
+  min-height: 100vh;
+  place-content: center;  
+  /* gap: 0em 1em; */
+  margin: auto;
+}
+
+.TextSection{
+  width: 50%;
+  min-width: 23em;
+  padding: 0 1em;
+  color: white;
+
+}
+.FormSection{
+  width: 50%;
+  padding: 0 1em;
+
+}
+
+.TextSection h2{
+  font-size: 2.4em;
+}
+.TextSection p{
+  
+}
+Button{
+  width: 100%;
+  padding: 1em 3em;
+  border: none;
+  color: white;
+  font-weight: 700;
+  border-radius: 8px;
+  box-shadow: 0px 5px 1px hsla(249, 10%, 26%, 0.301);
+}
+.PrimaryButton{
+  background-color: var(--clr-primary-200);
+}
+.AccentButton{
+  background-color: var(--clr-accent-500);
+}
+
+.Form{
+  margin: 1em 0;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 1.7em;
+  border-radius: 8px;
+  box-shadow: 0px 5px 1px hsla(249, 10%, 26%, 0.301);
+}
+
+.Form input{
+  border: 1px solid var(--clr-neutral-100);
+  border-radius: 8px;
+  padding: 0.7em;
+  font-weight: 700;
+}
+.Form input:focus{
+  outline: 0;
+  border: 1px solid var(--clr-accent-500);
+  /* border: 0; */
+}
+
+.TermsSpan{
+  font-size: 0.6em;
+  color: var(--clr-neutral-100);
+  text-align: center;
+}
+.TermsSpan a{
+  color: var(--clr-primary-400);
+  font-weight: 700;
+  text-decoration: none;
+}

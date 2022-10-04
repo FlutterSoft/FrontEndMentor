@@ -18,6 +18,7 @@ body{
   font-family: 'Poppins', sans-serif;
   min-height: 100vh;
   background-color: var(--clr-primary-400);
+  background-image: url('../public/images/bg-intro-desktop.png');
 }
 
 .App{
@@ -33,7 +34,7 @@ body{
 
 .TextSection{
   width: 50%;
-  min-width: 23em;
+  min-width: 400px;
   padding: 0 1em;
   color: white;
   display: grid;
@@ -43,11 +44,7 @@ body{
   width: 50%;
   padding: 0 1em;
 }
-/* @media screen and (max-width: 23em){
-  .FormSection{
-    width: 100%;
-  }
-} */
+
 
 .TextSection h2{
   font-size: 2.4em;
@@ -101,6 +98,7 @@ input:invalid:not(:focus){
   border-radius: 8px;
   padding: 0.7em;
   font-weight: 700;
+
 }
 .Form input:focus{
   outline: 0;
@@ -108,7 +106,13 @@ input:invalid:not(:focus){
   /* border: 0; */
 }
 
-.TermsSpan{
+.invalid{
+  background-image: url('../public/images/icon-error.svg');
+  background-repeat: no-repeat;
+  background-position: 97% center;
+}
+
+.TermsSpan, .passwordInvalid, .SuccessMessage, .InputEmpty{
   font-size: 0.6em;
   color: var(--clr-neutral-100);
   text-align: center;
@@ -118,3 +122,38 @@ input:invalid:not(:focus){
   font-weight: 700;
   text-decoration: none;
 }
+.passwordInvalid{
+  color: var(--clr-primary-400);
+}
+
+.hidden{
+  display: none;
+}
+
+.SuccessMessage{
+  color: var(--clr-primary-200);
+}
+
+.InputEmpty{
+  color: var(--clr-primary-400);
+  margin: -1em 0;
+  padding: 0;
+  text-align: right;
+}
+
+
+
+@media screen and (max-width: 895px){
+  .FormSection, .TextSection{
+    width: 100%;
+    padding: 1em;
+    margin: auto 0;
+    text-align: center;
+    max-width: 400px;
+  }
+  .App{
+    padding: 0;
+    margin: auto;
+  }
+}
+

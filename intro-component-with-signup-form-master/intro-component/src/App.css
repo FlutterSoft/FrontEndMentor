@@ -6,7 +6,6 @@
   --clr-accent-500: hsl(248, 32%, 49%);
   --clr-neutral-700: hsl(249, 10%, 26%);
   --clr-neutral-100: hsl(246, 25%, 77%);
-
 }
 
 *{
@@ -28,7 +27,6 @@ body{
   max-width: 1280px;
   min-height: 100vh;
   place-content: center;  
-  /* gap: 0em 1em; */
   margin: auto;
 }
 
@@ -40,11 +38,11 @@ body{
   display: grid;
   align-content: center;
 }
+
 .FormSection{
   width: 50%;
   padding: 0 1em;
 }
-
 
 .TextSection h2{
   font-size: 2.4em;
@@ -52,8 +50,8 @@ body{
 }
 .TextSection p{
   margin: 0.5em 0;
-
 }
+
 Button{
   width: 100%;
   padding: 1em 3em;
@@ -88,22 +86,20 @@ Button:hover{
   box-shadow: 0px 5px 1px hsla(249, 10%, 26%, 0.301);
 }
 
-input:invalid:not(:focus){
-  color: var(--clr-primary-400);
-}
-
-
 .Form input{
   border: 1px solid var(--clr-neutral-100);
   border-radius: 8px;
   padding: 0.7em;
   font-weight: 700;
-
 }
 .Form input:focus{
   outline: 0;
   border: 1px solid var(--clr-accent-500);
   /* border: 0; */
+}
+
+input:invalid:not(:focus){
+  color: var(--clr-primary-400);
 }
 
 .invalid{
@@ -141,8 +137,6 @@ input:invalid:not(:focus){
   text-align: right;
 }
 
-
-
 @media screen and (max-width: 895px){
   .FormSection, .TextSection{
     width: 100%;
@@ -154,6 +148,9 @@ input:invalid:not(:focus){
   .App{
     padding: 0;
     margin: auto;
+  }
+  body{
+    background-image: url('../public/images/bg-intro-mobile.png');
   }
 }
 

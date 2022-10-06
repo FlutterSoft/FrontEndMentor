@@ -1,7 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
 
-
+// Text section component containing title and paragraph
 function TextSection({title, paragraph}){
   return(
     <section className="TextSection">
@@ -11,13 +10,18 @@ function TextSection({title, paragraph}){
   )
 }
 
+// Button component
 function Button({text, className, onClick}){
   return(
     <button className={className} onClick={onClick}>{text}</button>
   )
 }
+
+// Form click function
+
 function handleClick(e){
   e.preventDefault()
+  // Check validity of each input and add invalid message if not valid
   document.querySelectorAll('input').forEach(el => {
     if(!el.validity.valid){
       el.classList.add('invalid')
@@ -29,7 +33,7 @@ function handleClick(e){
       el.nextSibling.innerHTML=`${el.placeholder} cannot be empty`
     }
     else if(el.name == "email" && !el.validity.valueMissing && !el.validity.valid){
-      el.nextSibling.innerHTML='Invalid Email Address'
+      el.nextSibling.innerHTML='Looks like this is not an email'
     }
     else{
       el.nextSibling.innerHTML=''
@@ -42,19 +46,23 @@ function handleClick(e){
       document.querySelector('.passwordInvalid').classList.add('hidden')
     }
   })
+  // if all inputs are valid then reset form / submit
   const arr = [...document.querySelectorAll('input')]
   if(arr.filter(el => el.validity.valid == true).length == 4){
     resetForm()
   }
 }
 
+// Submit/Reset form function
 function resetForm(){
   document.querySelectorAll('input').forEach(el =>{
     el.value = ''
   })
   document.querySelector('.SuccessMessage').classList.remove('hidden')
+  setTimeout(()=>  document.querySelector('.SuccessMessage').classList.add('hidden'), 2000)
 }
 
+// Form component
 function Form(){
   return(
     <form className="Form">

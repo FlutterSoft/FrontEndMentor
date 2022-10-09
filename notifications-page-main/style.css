@@ -22,39 +22,52 @@ body{
     font-size: 16px;
     font-family: 'Plus Jakarta Sans', sans-serif;
     background-color: var(--clr-neutral-100);
-
+    background-color: var(--clr-neutral-200);
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    padding: 0.5em;
 }
+
 
 .notifications-container{
-    padding: 0 0.5em;
+    padding: 0.5em 1.5em;
     font-weight: 400;
-    /* max-width: 80%; */
-    /* margin: auto; */
-
-
+    max-width: 800px;
+    margin: auto;
+    background-color: var(--clr-neutral-100);
+    border-radius: 15px;
+    box-shadow: 2px 0px 20px var(--clr-neutral-300);
 }
+
 header{
     display: flex;
     align-items: center;
     justify-content: flex-start;
     width: 100%;
-
 }
 
 h1{
-    font-size: 1rem
+    font-size: 1.4rem
 }
+
 .mark-all-as-read{
-    font-size: 0.7rem;
+    font-size: 1rem;
+    cursor: pointer;
+    color: var(--clr-neutral-600);
+    padding-left: 10px;
 }
+.mark-all-as-read:hover{
+    color: var(--clr-primary-700) 
+}
+
 .notification-count-container{
     margin-left: 0.5em;
-    flex-grow: 0.3;
+    flex-grow: 1;
     font-size: 0.8rem;
 }
+
 .notification-count{
-    /* margin-left: 1em;
-    margin-right: 15em; */
     padding: 0.4em 0.8em;
     color: white;
     border-radius: 10px;
@@ -70,6 +83,9 @@ h1{
     gap: 1em;
     color: var(--clr-neutral-600);
     margin-bottom: 10px;
+}
+.notification-content{
+    width: 100%;
 }
 .notification-details{
     display: relative;
@@ -91,15 +107,20 @@ h1{
     border: 1px solid var(--clr-neutral-300);
     margin-top: 1em;
     border-radius: 5px;
+    cursor: pointer;
+}
+.notification-private-message:hover{
+    background-color: var(--clr-neutral-300);
 }
 .notification-private-message p{
     padding: 0 1em;
 }
-
+.notification-type-picture .notification-content{
+    display: relative;
+}
 .notification-picture{
     float: right;
-    width: 35px;
-    /* margin-left: 2em; */
+    width: 45px;
     position: relative;
     right: 0;
     top: 0;
@@ -107,4 +128,34 @@ h1{
 
 .unread{
     background-color: var(--clr-neutral-200);
+    
+}
+.unread .notification-details::after{
+    content: "";
+    display: inline-block;
+    height: 12px;
+    width: 12px;
+    margin-left: 5px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.notification-type-react a{
+    text-decoration: none;
+    color: var(--clr-neutral-600);
+    font-weight: 800;
+}
+.notification-type-group a:not(.user-name){
+    text-decoration: none;
+    color: var(--clr-primary-700);
+    font-weight: 800;
+}
+
+.notifications-list{
+    margin: 0;
+    padding: 0;
+}
+
+a:hover{
+    color: var(--clr-primary-700) 
 }

@@ -136,7 +136,7 @@ h1{
     height: 12px;
     width: 12px;
     margin-left: 5px;
-    background-color: red;
+    background-color: var(--clr-primary-400);
     border-radius: 50%;
 }
 

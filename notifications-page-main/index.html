@@ -8,31 +8,90 @@
   
   <title>Frontend Mentor | Notifications page</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
+  <main class="notifications-container">
+    <header>
+      <h1>Notifications</h1>
+      <div class="notification-count-container">
+        <span class="notification-count" >3</span>
+      </div>
+      <span class="mark-all-as-read">Mark all as read</span>
+    </header>
+    <div class="notification unread">
+      <img class="user-avatar" src="./assets/images/avatar-mark-webber.webp" alt="">
+      <div class="notification-content">
+        <span class="notification-details">
+          <a class="user-name" rel="author" href="#">Mark Webber</a> reacted to your recent post <a href="#">My first tournament</a> today!
+        </span>
+        <span class="notification-time">
+          1m ago
+        </span>
+      </div>
+    </div>
+    <div class="notification unread">
+      <img class="user-avatar" src="./assets/images/avatar-angela-gray.webp" alt="">
+      <div class="notification-content">
+        <span class="notification-details">
+          <a class="user-name" rel="author" href="#">Angela Gray</a> followed you
+        </span>
+        <span class="notification-time">
+          5m ago          
+        </span>
+      </div>
+    </div>
+    <div class="notification">
+      <img class="user-avatar" src="./assets/images/avatar-rizky-hasanuddin.webp" alt="">
+      <div class="notification-content">
+        <span class="notification-details">
+          <a class="user-name" rel="author" href="#">Rizky Hasanuddin</a> sent you a private message
+        </span>
+        <span class="notification-time">
+          5 days ago         
+        </span>
+        <div class="notification-private-message">
+          <p>
+            Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game.
+          </p>
 
-  Notifications 3
+        </div>
+      </div>
+    </div>
+    <div class="notification unread">
+      <img class="user-avatar" src="./assets/images/avatar-kimberly-smith.webp" alt="">
+      <div class="notification-content">
+        <span class="notification-details">
+          <a class="user-name" rel="author" href="#">Kimberly Smith</a> commented on your picture 
+        </span>
+        <img class="notification-picture" src="./assets/images/image-chess.webp" alt="">
 
-  Mark all as read
+        <span class="notification-time">
+          1 week ago         
+        </span>
+      </div>
+    </div>
+    <div class="notification unread">
+      <img class="user-avatar" src="./assets/images/avatar-jacob-thompson.webp" alt="">
+      <div class="notification-content">
+        <span class="notification-details">
+          <a class="user-name" rel="author" href="#">Jacon Thompson</a> has joined your group <a href="#">Chess Club</a> 
+        </span>
+        <span class="notification-time">
+          1 day ago         
+        </span>
+      </div>
+    </div>
+  </main>
 
-  Mark Webber reacted to your recent post My first tournament today!
-  1m ago
 
-  Angela Gray followed you
-  5m ago
 
-  Jacob Thompson has joined your group Chess Club
-  1 day ago
+   
 
-  Rizky Hasanuddin sent you a private message
-  5 days ago
-  Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and 
-  I'm already having lots of fun and improving my game.
+<!--    
+   
+  
 
   Kimberly Smith commented on your picture
   1 week ago
@@ -42,10 +101,12 @@
 
   Anna Kim left the group Chess Club
   2 weeks ago
-  
-  <div class="attribution">
+   -->
+
+  <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </div> -->
+  <script src="main.js"></script>
 </body>
 </html>

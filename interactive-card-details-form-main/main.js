@@ -7,7 +7,9 @@ const cardCvcInput = document.querySelector("#cvc-input")
 const cardNumber = document.querySelector("#card-number")
 
 document.querySelector("#number-input").addEventListener('change', function(){
-    cardNumber.innerHTML = this.value
+    cardNumber.innerHTML = this.value.slice(0,4) + ' ' + this.value.slice(4,8) + ' ' +
+    this.value.slice(8,12) + ' ' +
+    this.value.slice(12, 16)
 })
 
 

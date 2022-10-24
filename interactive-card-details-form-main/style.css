@@ -18,6 +18,9 @@ body{
     margin: 0;
     padding: 0;
 }
+main{
+    margin: auto;
+}
 
 form{
     background-color: var(--clr-neutral-100);
@@ -26,11 +29,13 @@ form{
     flex-direction: column;
     font-size: 0.8rem;
     gap: 1em;
+    letter-spacing: 2px;
 }
 form input{
     border-radius: 5px;
     border: 1px solid var(--clr-neutral-300);
     padding: 0.8em;
+    margin-bottom: 1em;
 }
 form::placeholder {
     color: blue;
@@ -130,5 +135,14 @@ input[type=submit]{
 }
 
 #month-expiry-input, #year-expiry-input{
-    width: 4.5em;
+    min-width: 6em;
+    /* width: 100%; */
+}
+#cvc-input{
+    min-width: 10em;
+}
+
+.flex-container{
+    display: flex;
+    gap: 1em;
 }

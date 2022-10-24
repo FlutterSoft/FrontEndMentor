@@ -44,15 +44,15 @@
         <div class="row">
           <div class="column">
             <label for="month-expiry">EXP. DATE</label>
-            <input id="month-expiry-input" name="month-expiry" type="number" placeholder="MM">
+            <input id="month-expiry-input" name="month-expiry" type="number" placeholder="MM" min="1" max="12">
           </div>
           <div class="column">
             <label for="year-expiry">(MM/YY)</label>
-            <input id="year-expiry-input" name="year-expiry" type="number" placeholder="YY">
+            <input id="year-expiry-input" name="year-expiry" type="number" placeholder="YY" min="22" max="30">
           </div>
           <div class="column">
             <label for="cvc">CVC</label>
-            <input id="cvc-input" name="cvc" type="number" placeholder="e.g. 123">
+            <input id="cvc-input" name="cvc" type="number" placeholder="e.g. 123" minlength="3" maxlength="3" min="001" max="999">
           </div>
         </div>          
         <input type="submit" value="Confirm">

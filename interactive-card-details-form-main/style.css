@@ -40,10 +40,20 @@ form input{
 form::placeholder {
     color: blue;
 }
-input[type=submit]{
+
+.button{
     background-color: var(--clr-neutral-700);
     color: var(--clr-neutral-100);
+    padding: 1.2em;
+    cursor: pointer;
 }
+.button:hover{
+    opacity: 90%;
+}
+.button:active{
+    transform: scale(0.99);
+}
+
 .row{
     display: flex;
     flex-direction: row;
@@ -145,4 +155,33 @@ input[type=submit]{
 .flex-container{
     display: flex;
     gap: 1em;
+}
+
+.hidden{
+    display: none;
+}
+
+#success-section{
+    margin: auto;
+    text-align: center;
+    margin-top: 4em;
+
+}
+h3{
+    color: var(--clr-neutral-700);
+    letter-spacing: 5px;
+    font-size: 1.6em;
+}
+#success-section p{
+    color: var(--clr-neutral-500);
+    margin-bottom: 2em;
+}
+button{
+    border-radius: 5px;
+    border: 1px solid var(--clr-neutral-300);
+    padding: 0.8em;
+    margin-bottom: 1em;
+    background-color: var(--clr-neutral-700);
+    color: var(--clr-neutral-100);
+    width: 100%;
 }

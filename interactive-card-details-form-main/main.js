@@ -15,10 +15,14 @@ $("#number-input").addEventListener('input', function(){
     if(this.value.length > 16){
         this.value = this.value.slice(0, 16)
     }
+    if(this.value.length < 16){
+        validity.number = false
+    }
     if(this.value.length == 16){
         cardNumber.innerHTML = this.value.slice(0,4) + ' ' + this.value.slice(4,8) + ' ' +
         this.value.slice(8,12) + ' ' +
         this.value.slice(12, 16)
+        validity.number = true
     }
 })
 
@@ -26,12 +30,24 @@ $("#cvc-input").addEventListener('input', function(){
     if(this.value.length > 3){
         this.value = this.value.slice(0, 3)
     }
-    if(this.value > 0 && this.value < 999 && this.value.length == 3)
-    cardCvc.innerHTML = this.value
+    if(this.value > 0 && this.value < 999 && this.value.length == 3){
+        cardCvc.innerHTML = this.value
+        validity.cvc = true
+    }
+    else{
+        validity.cvc = false
+    }
 })
 
 $("#name-input").addEventListener('input', function(){
-    cardName.innerHTML = this.value.toUpperCase()
+    if(this.value.length > 1){
+        cardName.innerHTML = this.value.toUpperCase()
+        validity.name = true
+    }
+    else{
+        validity.name = false
+    }
+
 })
 
 $("#month-expiry-input").addEventListener('input', addExpiry)
@@ -45,14 +61,41 @@ function addExpiry(){
     if( (cardMonthInput.value >= 1 && cardMonthInput.value <= 12) && cardYearInput.value >= 22 && cardYearInput.value <= 30){
         let cardExpiryString = cardMonthInput.value + '/' + cardYearInput.value
         cardExpiry.innerHTML = cardExpiryString
+        validity.month = true
+        validity.year = true
+    }
+    else{
+        validity.month = false
+        validity.year = false
     }
 }
 
-$("#form").addEventListener('submit', function(e){
+const validity = {
+    "name" : false,
+    "number" : false,
+    "month" : false,
+    "year" : false,
+    "cvc" : false,
+}
 
+$("#form").addEventListener('submit', function(e){
     e.preventDefault()
-    console.log(e)
+    let invalid = Object.values(validity).includes(false)
+
+    if(!invalid){
+        $("#form").classList.add('hidden')
+        $("#success-section").classList.remove('hidden')
+    }
 
 })
 
+$("#continue-btn").addEventListener('click', function(){
+    $("#form").classList.remove('hidden')
+    $("#success-section").classList.add('hidden') 
+    cardNameInput.value = ""
+    cardNumberInput.value = ""
+    cardCvcInput.value = ""
+    cardMonthInput.value = ""
+    cardYearInput.value = ""
+})
 

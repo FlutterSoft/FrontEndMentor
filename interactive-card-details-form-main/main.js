@@ -97,5 +97,9 @@ $("#continue-btn").addEventListener('click', function(){
     cardCvcInput.value = ""
     cardMonthInput.value = ""
     cardYearInput.value = ""
+    cardNumber.innerHTML = "0000 0000 0000 0000"
+    cardName.innerHTML = "JANE APPLESEED"
+    cardExpiry.innerHTML = "00/00"
+    cardCvc.innerHTML = "123"
 })
 

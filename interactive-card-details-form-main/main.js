@@ -12,16 +12,17 @@ const cardExpiry = $("#card-expiry")
 const cardCvc = $("#card-cvc")
 
 $("#number-input").addEventListener('input', function(){
-    if(this.value.length > 16){
-        this.value = this.value.slice(0, 16)
+    if(this.value.length == 4 || this.value.length == 9 || this.value.length == 14){
+        this.value = this.value + ' '
     }
-    if(this.value.length < 16){
+    if(this.value.length > 19){
+        this.value = this.value.slice(0, 19)
+    }
+    else if(this.value.length < 16){
         validity.number = false
     }
-    if(this.value.length == 16){
-        cardNumber.innerHTML = this.value.slice(0,4) + ' ' + this.value.slice(4,8) + ' ' +
-        this.value.slice(8,12) + ' ' +
-        this.value.slice(12, 16)
+    if(this.value.length == 19){
+        cardNumber.innerHTML = this.value
         validity.number = true
     }
 })

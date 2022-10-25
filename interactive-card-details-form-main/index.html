@@ -39,7 +39,7 @@
         <label for="name">CARDHOLDER NAME</label>
         <input id="name-input" name="name" type="text" placeholder="e.g. Jane Appleseed" required>
         <label for="card-number">CARD NUMBER</label>
-        <input id="number-input" name="card-number" type="number" placeholder="e.g. 1234 5678 9123 0000" minlength="16" maxlength="16" required>
+        <input id="number-input" name="card-number" type="pattern" placeholder="e.g. 1234 5678 9123 0000" minlength="19" maxlength="19" pattern="[0-9]{4}\s[0-9]{4}\s[0-9]{4}\s[0-9]{4}" required>
 
         <div class="row">
           <div class="flex-container">

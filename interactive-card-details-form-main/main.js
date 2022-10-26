@@ -11,6 +11,8 @@ const cardName = $("#card-name")
 const cardExpiry = $("#card-expiry")
 const cardCvc = $("#card-cvc")
 
+const allInputs = [$("#name-input"), $("#number-input"), $("#month-expiry-input"), $("#year-expiry-input"), $("#cvc-input") ]
+
 $("#number-input").addEventListener('input', function(){
     if(this.value.length == 4 || this.value.length == 9 || this.value.length == 14){
         this.value = this.value + ' '
@@ -87,7 +89,6 @@ $("#form").addEventListener('submit', function(e){
         $("#form").classList.add('hidden')
         $("#success-section").classList.remove('hidden')
     }
-
 })
 
 $("#continue-btn").addEventListener('click', function(){

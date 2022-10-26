@@ -11,6 +11,7 @@
 </head>
 <body>
   <main>
+    <!-- CARDS SECTION -->
     <section class="card-section">
       <div class="card card-front">
         <img class="card-logo" src="./images/card-logo.svg" alt="">
@@ -28,57 +29,55 @@
           </span>
         </div>
       </div>
-
       <div class="card card-back">
         <span id="card-cvc">123</span>
       </div>
     </section>
 
+    <!-- FORM SECTION -->
     <section class="form-section">
       <form id="form" action="#">
         <label for="name">CARDHOLDER NAME</label>
         <input id="name-input" name="name" type="text" placeholder="e.g. Jane Appleseed" required>
+        <span id="name-error" class="error hidden">Please enter a name</span>
         <label for="card-number">CARD NUMBER</label>
         <input id="number-input" name="card-number" type="pattern" placeholder="e.g. 1234 5678 9123 0000" minlength="19" maxlength="19" pattern="[0-9]{4}\s[0-9]{4}\s[0-9]{4}\s[0-9]{4}" required>
+        <span id="number-error" class="error hidden">Wrong format, 16 numbers only</span>
 
         <div class="row">
           <div class="flex-container">
             <div class="column">
               <label for="month-expiry">EXP. DATE</label>
               <input id="month-expiry-input" name="month-expiry" type="number" placeholder="MM" min="1" max="12" required>
+              <span id="month-error" class="error hidden">Can't be blank</span>
             </div>
             <div class="column">
               <label for="year-expiry">(MM/YY)</label>
               <input id="year-expiry-input" name="year-expiry" type="number" placeholder="YY" min="22" max="30" required>
+              <span id="year-error" class="error hidden">Can't be blank</span>
+
             </div>
           </div>
           
           <div class="column">
             <label for="cvc">CVC</label>
-            <input id="cvc-input" name="cvc" type="number" placeholder="e.g. 123" minlength="3" maxlength="3" min="001" max="999" required>
+            <input id="cvc-input" name="cvc" type="pattern" placeholder="e.g. 123" minlength="3" maxlength="3" min="001" max="999" pattern="[0-9]{3}"   required>
+            <span id="cvc-error" class="error hidden">3 numbers only.</span>
+
           </div>
         </div>          
         <input class="button" type="submit" value="Confirm">
       </form>
 
+      <!-- SUCCESS STATE -->
       <div id="success-section" class="hidden">
         <img src="./images/icon-complete.svg" alt="">
         <h3>THANK YOU!</h3>
         <p>We've added your card details</p>
         <button id="continue-btn" class="button">Continue</button>
       </div>
-
     </section>
- 
   </main>
-
-
-  <!-- Completed state start -->
-
-  <!-- Thank you!
-  We've added your card details
-  Continue
-   -->
   
   <script src="./main.js"></script>
 </body>

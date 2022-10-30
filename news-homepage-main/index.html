@@ -7,20 +7,29 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | News homepage</title>
+  <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="style.css">
 
 </head>
 <body>
   <header>
-    <img src="./assets/images/logo.svg" alt="Logo">
-    <nav class="main-nav">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">New</a></li>
-        <li><a href="#">Popular</a></li>
-        <li><a href="#">Trending</a></li>
-        <li><a href="#">Categories</a></li>
+    <nav class="navbar">
+      <a class="nav-branding" href="#">
+        <img src="./assets/images/logo.svg" alt="Logo">
+      </a>
+
+      <ul class="nav-menu">
+        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">New</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Popular</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Trending</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Categories</a></li>
       </ul>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
     </nav>
   </header>
 
@@ -78,7 +87,7 @@
       <!-- Article -->
       <div class="top-articles__article">
         <picture>
-          <img src="./assets/images/image-retro-pcs.jpg" alt="Retro Pc">
+          <img class="top-articles__img" src="./assets/images/image-retro-pcs.jpg" alt="Retro Pc">
         </picture>
         <div class="top-articles__article__content">
           <span class="article-number">01</span>
@@ -93,7 +102,7 @@
       <!-- Article -->
       <div class="top-articles__article">
         <picture>
-          <img src="./assets/images/image-top-laptops.jpg" alt="Retro Pc">
+          <img class="top-articles__img" src="./assets/images/image-top-laptops.jpg" alt="Retro Pc">
         </picture>
         <div class="top-articles__article__content">
           <span class="article-number">02</span>
@@ -108,7 +117,7 @@
       <!-- Article -->
       <div class="top-articles__article">
         <picture>
-          <img src="./assets/images/image-gaming-growth.jpg" alt="Retro Pc">
+          <img class="top-articles__img" src="./assets/images/image-gaming-growth.jpg" alt="Retro Pc">
         </picture>
         <div class="top-articles__article__content">
           <span class="article-number">03</span>

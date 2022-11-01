@@ -121,10 +121,16 @@ h5{
     justify-content: space-evenly;
     /* align-items: baseline; */
     border-bottom: 1px solid var(--clr-neutral-200);
+    margin-top: 50px;
+    padding-bottom: 15px;
 }
 .chart-column{
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
+    align-items: center;   
+}
+.day-span{
+
 }
 .bar{
     background-color: var(--clr-primary-400);
@@ -132,7 +138,36 @@ h5{
     width: 40px;
     border-radius: 5px;
 }
+.chart-column:nth-child(1) .bar {
+    height: 27%;
+}
 .chart-column:nth-child(2) .bar {
-    height: 50%;
+    height: 57%;
 }
+.chart-column:nth-child(3) .bar {
+    height: 80%;
+    background-color: var(--clr-primary-300);
 }
+.chart-column:nth-child(4) .bar {
+    height: 49%;
+}
+.chart-column:nth-child(5) .bar {
+    height: 38%;
+}
+.chart-column:nth-child(6) .bar {
+    height: 60%;
+}
+.chart-column:nth-child(7) .bar {
+    height: 44%;
+}
+
+.day-spending-popup{
+    background-color: var(--clr-neutral-600);
+    color: var(--clr-neutral-200);
+    font-size: 0.7rem;
+    padding: 0.5em;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    display: none;
+}
+

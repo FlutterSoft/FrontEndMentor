@@ -12,25 +12,49 @@
 
 </head>
 <body>
+  <main>
+    <section class="balance-container rounded">
+      <div class="column">
+        <h3>My balance</h3>
+        <span class="balance-amount">$921.48</span>
+      </div>
+      <picture>
+        <img class="logo" src="./images/logo.svg" alt="">
+      </picture>
+    </section>
 
-  My balance
-  $921.48
+    <section class="spending-container rounded">
+      <h1 class="clr-600">  
+        Spending - Last 7 days      
+      </h1>
+      <div class="spending-container__chart">
+        <div class="chart-column"></div>
+        <div class="chart-column"></div>
+        <div class="chart-column"></div>
+        <div class="chart-column"></div>
+        <div class="chart-column"></div>
+        <div class="chart-column"></div>
+        <div class="chart-column"></div>
+      </div>
 
-  Spending - Last 7 days
+      <div class="spending-container__totals">
+        <div class="container">
+          <span class="block-span clr-500 text-small">Total this month</span>
+          <span class="total-spending block-span clr-600 text-large">$478.33</span>
+        </div>
+        <div class="percentage-info">
+          <h5 class="clr-600 text-small" id="percentage">+2.4%</h5>
+          <span class="text-small clr-500 percentage-caption">from last month</span>
+        </div>
+      </div>
+    </section>
 
-  mon
-  tue
-  wed
-  thu
-  fri
-  sat
-  sun
 
-  Total this month
-  $478.33
 
-  +2.4%
-  from last month
+
+  </main>
+
+
   
   <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 

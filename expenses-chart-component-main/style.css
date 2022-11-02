@@ -110,24 +110,23 @@ h5{
     justify-content: center;
 }
 
-.spending-container__chart{
-    height: 150px;
-    margin-bottom: 1em;
-}
 
 .spending-container__chart{
+    /* height: 200px; */
     display: flex;
-    gap: 10px;
     justify-content: space-evenly;
-    /* align-items: baseline; */
+    /* gap: 10px; */
+    margin-top: 10px;
+    margin-bottom: 1em;
+    padding-bottom: 15px;    
     border-bottom: 1px solid var(--clr-neutral-200);
-    margin-top: 50px;
-    padding-bottom: 15px;
 }
 .chart-column{
     display: flex;
     flex-direction: column-reverse;
-    align-items: center;   
+    align-items: center;  
+    height: 200px; 
+    width: 48px;
 }
 .day-span{
 
@@ -135,17 +134,18 @@ h5{
 .bar{
     background-color: var(--clr-primary-400);
     height: 70%;
-    width: 40px;
+    width: 38px;
     border-radius: 5px;
+
 }
 .chart-column:nth-child(1) .bar {
-    height: 27%;
+    height: 40px;
 }
 .chart-column:nth-child(2) .bar {
     height: 57%;
 }
 .chart-column:nth-child(3) .bar {
-    height: 80%;
+    height: 140px;
     background-color: var(--clr-primary-300);
 }
 .chart-column:nth-child(4) .bar {
@@ -164,7 +164,7 @@ h5{
 .day-spending-popup{
     background-color: var(--clr-neutral-600);
     color: var(--clr-neutral-200);
-    font-size: 0.7rem;
+    font-size: 12px;
     padding: 0.5em;
     border-radius: 4px;
     margin-bottom: 5px;

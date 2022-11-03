@@ -18,9 +18,9 @@ async function fetchChartData(){
     const chartData = await chartFetch.json()
     const barHeights = chartData.map(x => x.amount)
     console.log(barHeights)
-    // while(barHeights.some(amount => amount > 100)){
-    //     barHeights.forEach(x => x / 10)
-    // }
+    while(barHeights.some(amount => amount > 100)){
+        barHeights = barHeights.forEach(x => x /= 10)
+    }
     console.log(barHeights)
 
     for(let i = 0; i < dailySpendings.length; i++){

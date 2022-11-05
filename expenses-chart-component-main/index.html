@@ -5,14 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
   <title>Frontend Mentor | Expenses chart component</title>
-
   <link rel="stylesheet" href="style.css">
-
 </head>
+
 <body>
   <main>
+    <!-- Balance Section -->
     <section class="balance-container rounded">
       <div class="column">
         <h3>My balance</h3>
@@ -23,62 +22,65 @@
       </picture>
     </section>
 
+    <!-- Spending Section -->
     <section class="spending-container rounded">
       <h1 class="clr-600">  
         Spending - Last 7 days      
       </h1>
+      <!-- Spending Chart -->
       <div class="spending-container__chart">
         <div class="chart-column">
           <span class="day-span clr-500 text-small">mon</span>
           <div class="bar"></div>
           <div class="day-spending-popup">
-            <span>$22.36</span>
+            <span></span>
           </div>
         </div>
         <div class="chart-column">
           <span class="day-span clr-500 text-small">tue</span>
           <div class="bar"></div>
           <div class="day-spending-popup">
-            <span>$52.36</span>
+            <span></span>
           </div>
         </div>        
         <div class="chart-column">
           <span class="day-span clr-500 text-small">wed</span>
-          <div class="bar"></div>
+          <div class="bar active"></div>
           <div class="day-spending-popup">
-            <span>$66.36</span>
+            <span></span>
           </div>
         </div>
         <div class="chart-column">
           <span class="day-span clr-500 text-small">thu</span>
           <div class="bar"></div>
           <div class="day-spending-popup">
-            <span>$52.36</span>
+            <span></span>
           </div>
         </div>
         <div class="chart-column">
           <span class="day-span clr-500 text-small">fri</span>
           <div class="bar"></div>
           <div class="day-spending-popup">
-            <span>$52.36</span>
+            <span></span>
           </div>
         </div>
         <div class="chart-column">
           <span class="day-span clr-500 text-small">sat</span>
           <div class="bar"></div>
           <div class="day-spending-popup">
-            <span>$40</span>
+            <span></span>
           </div>
         </div>
         <div class="chart-column">
           <span class="day-span clr-500 text-small">sun</span>
           <div class="bar"></div>
           <div class="day-spending-popup">
-            <span>$33</span>
+            <span></span>
           </div>
         </div>
       </div>
 
+      <!-- Spending Totals -->
       <div class="spending-container__totals">
         <div class="container">
           <span class="block-span clr-500 text-small">Total this month</span>
@@ -90,14 +92,8 @@
         </div>
       </div>
     </section>
-
-
-
-
   </main>
 
-
-  
   <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.

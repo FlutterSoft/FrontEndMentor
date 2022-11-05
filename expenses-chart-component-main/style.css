@@ -8,6 +8,7 @@
     --clr-neutral-200: hsl(27, 66%, 92%);
     --clr-neutral-100: hsl(33, 100%, 98%);
 }
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -27,39 +28,49 @@ main{
     height: 100vh;
 }
 
+/* HEADINGS */
 h1{
     font-size: 1.3rem;
 }
+
 h2{
     font-size: 3rem;
 }
+
 h3{
     font-size: 0.9rem;
     font-weight: 400;
-    margin: 0.3em 0;}
+    margin: 0.3em 0;
+}
+
 h4{
     font-size: 0.9rem;
     font-weight: 400;
     margin: 0.3em 0;
 }
+
 h5{
     font-size: 0.8rem;
     margin: 0.3em 0;
 }
-
+/* HELPERS */
 .clr-500{
     color: var(--clr-neutral-500);
 }
+
 .clr-600{
     color: var(--clr-neutral-600);
 }
+
 .text-small{
     font-size: 0.8rem;
 }
+
 .text-large{
     font-size: 2rem;
     font-weight: 700;
 }
+
 .block-span{
     display: block;
 }
@@ -68,10 +79,16 @@ h5{
     border-radius: 10px;
 }
 
+.bar.active{
+    background-color: var(--clr-primary-300);   
+}
+
 .logo{
     width: 50px;
 }
 
+
+/* Classes */
 
 .total-spending{
     font-size: 2rem;
@@ -110,55 +127,33 @@ h5{
     justify-content: center;
 }
 
-
 .spending-container__chart{
-    /* height: 200px; */
     display: flex;
     justify-content: space-evenly;
-    /* gap: 10px; */
     margin-top: 10px;
     margin-bottom: 1em;
     padding-bottom: 15px;    
     border-bottom: 1px solid var(--clr-neutral-200);
 }
+
 .chart-column{
     display: flex;
     flex-direction: column-reverse;
     align-items: center;  
     height: 200px; 
     width: 48px;
+    margin: 50px 0;
 }
-.day-span{
 
-}
 .bar{
     background-color: var(--clr-primary-400);
-    height: 70%;
     width: 38px;
     border-radius: 5px;
+    cursor: pointer;
+}
 
-}
-.chart-column:nth-child(1) .bar {
-    height: 40px;
-}
-.chart-column:nth-child(2) .bar {
-    height: 57%;
-}
-.chart-column:nth-child(3) .bar {
-    height: 140px;
-    background-color: var(--clr-primary-300);
-}
-.chart-column:nth-child(4) .bar {
-    height: 49%;
-}
-.chart-column:nth-child(5) .bar {
-    height: 38%;
-}
-.chart-column:nth-child(6) .bar {
-    height: 60%;
-}
-.chart-column:nth-child(7) .bar {
-    height: 44%;
+.bar:hover{
+    opacity: 60%;
 }
 
 .day-spending-popup{

@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+*{
+    box-sizing: border-box;
+}
+
+:root{
+    --clr-neutral-100: hsl(0, 0%, 98%);
+    --clr-neutral-400: hsl(0, 0%, 41%);
+    --clr-neutral-700: hsl(0, 0%, 8%);
+}
+
+body{
+    font-size: 18px;
+    font-family: 'Epilogue', sans-serif;
+    font-weight: 500;
+}
+
+main{
+    margin: auto;
+    min-height: 100vh;
+    text-align: center;
+}
+h1{
+    font-weight: 700;
+    margin: 1em 0;
+}
+
+p{
+    font-size: 1rem;
+    margin-top: 0;
+    margin-bottom: 3em;
+}
+
+img{
+    max-width: 100%;
+}
+
+ul{
+    list-style: none;
+}
+.hero-content-container{
+    padding: 1em;
+}
+.hero-content__content{
+    color: var(--clr-neutral-400);
+}
+.client-logo-list{
+    margin: 3em 0;
+    padding: 0; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.client-logo{
+    width: 74px;
+}
+.audiophile-logo{
+    width: 50px;
+    margin-top: 5px;
+}
+
+.btn{
+    text-decoration: none;
+    background-color: var(--clr-neutral-700);
+    color: var(--clr-neutral-100);
+    padding: 0.8em 1.5em;
+    border-radius: 14px;
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 2em 0;
+}

@@ -5,35 +5,59 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="style.css">
   <title>Frontend Mentor | Intro section with dropdown navigation</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
-<body>
 
-  Features
+<body>
+    <!-- Features
   Company
   Careers
-  About
+  About -->
 
-  Login
-  Register
+  <!-- Login
+  Register -->
+  <main>
+    <section class="hero-img-container">
+      <picture>
+        <img src="./images/image-hero-mobile.png" alt="Person Using Laptop">
+      </picture>
+    </section>
+    <section class="hero-content-container">
+      <h1>Make remote work</h1>
+      <p class="hero-content__content">
+        Get your team in sync, no matter your location. Streamline processes, 
+        create team rituals, and watch productivity soar.    
+      </p>
+      <a class="btn" href="#">Learn more</a>
+     
+      <ul class="client-logo-list">
+        <li class="client-logo-li">
+          <img class="client-logo" src="./images/client-databiz.svg" alt="Databiz">
+        </li>
+        <li class="client-logo-li">
+          <img class="client-logo audiophile-logo" src="./images/client-audiophile.svg" alt="Audiophile">
+        </li>
+        <li class="client-logo-li">
+          <img class="client-logo" src="./images/client-meet.svg" alt="Meet">
+        </li>
+        <li class="client-logo-li">
+          <img class="client-logo" src="./images/client-maker.svg" alt="Maker">
+        </li>
+      </ul>
+    </section>
+  </main>
 
-  Make remote work
 
-  Get your team in sync, no matter your location. Streamline processes, 
-  create team rituals, and watch productivity soar.
 
-  Learn more
-  
+
+
+<!--   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </div> -->
+  <script src="./main.js"></script>
 </body>
 </html>

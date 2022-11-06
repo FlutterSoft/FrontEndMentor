@@ -20,6 +20,7 @@ main{
     min-height: 100vh;
     text-align: center;
 }
+
 h1{
     font-weight: 700;
     margin: 1em 0;
@@ -29,6 +30,7 @@ p{
     font-size: 1rem;
     margin-top: 0;
     margin-bottom: 3em;
+    line-height: 1.6rem;
 }
 
 img{
@@ -68,4 +70,206 @@ ul{
     font-size: 1rem;
     font-weight: 500;
     margin: 2em 0;
+}
+
+
+/* The darkened overlay/background */
+.grey-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--clr-neutral-700);
+    opacity: 30%;
+    z-index: 5;
+    transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+}
+
+
+/* Navigation */
+.navbar{
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5em 1.5em;
+}
+
+.nav-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-link{
+    transition: 0.4s ease;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: var(--clr-neutral-400);
+    font-size: 1.1rem;
+}
+
+.nav-link:hover{
+    color: var(--clr-primary-400);
+}
+.nav-link:active{
+    color: var(--clr-primary-400);
+}
+
+.login-btn{
+    color: var(--clr-neutral-400);
+    align-self: center;
+    margin: 25px;
+    font-size: 1rem;
+}
+.register-btn{
+    color: var(--clr-neutral-400);
+    align-self: center;
+    font-size: 1rem;
+    border: 2px solid var(--clr-neutral-400);
+    padding: 0.5em 2em;
+    width: 70%;
+    text-align: center;
+    border-radius: 15px;
+}
+
+/* Hamburger Menu */
+.hamburger{
+    cursor: pointer;
+    z-index: 99;
+}
+.bar{
+    display: block;
+    width: 40px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--clr-neutral-700);
+}
+
+.hamburger.active .bar:nth-child(2){
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1){
+    transform: translateY(9px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Mobile Navigation Menu */
+.nav-menu{
+    position: fixed;
+    z-index: 98;
+    left: 100%;
+    top: 0px;
+    gap: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background: var(--clr-neutral-100);
+    width: 70%;
+    text-align: left;
+    transition: 0.3s;
+    height: 110%;
+    margin-top: -50px;
+    padding: 0;
+}
+
+.nav-item{
+    margin: 12px 12px 12px 20px;
+    font-size: 1.5rem;
+}
+
+.nav-menu.active{
+    left: 33%;
+}
+
+.nav-item:nth-child(1){
+    margin-top: -100px;
+}
+
+.nav-dropdown-list{
+    padding: 1em 0 0em 1em;
+}
+
+.nav-dropdown-list-li{
+    color: var(--clr-neutral-400);
+    font-size: 1rem;
+    margin-bottom: 1em;
+    gap: 1em;
+}
+.nav-dropdown-list-li-with-icon{
+    color: var(--clr-neutral-400);
+    font-size: 1rem;
+    margin-bottom: 1em;
+    display: grid;
+    grid-template-columns: 0.2fr 1fr;
+    gap: 1em;
+}
+
+.dropdown-list-icon{
+    max-width: 30px;
+    align-self: center;
+    justify-self: center;
+}
+
+
+/* Helper class to make opaque */
+.opaque{
+    opacity: 0%;
+    transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+}
+
+/* Helper class to hide */
+.hidden{
+    display: none;
+}
+
+.desktop-nav-menu{
+    display: none;
+}
+
+/* Media queries for desktop view */
+@media(min-width: 1024px){
+    /* Navigation */
+    .hamburger{
+        display: none;
+    }
+    .nav-menu{
+        display: none;
+    }
+    .desktop-nav-menu{
+        display: flex;
+        gap: 2.5em;
+    }
+    .desktop-nav-link{
+        transition: 0.4s ease;
+    }
+    .desktop-nav-link:hover{
+        color: var(--clr-primary-400);
+    }
+    .desktop-nav-link:active{
+        color: var(--clr-primary-400);
+    }
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: auto;
+    }
 }

@@ -19,57 +19,78 @@
           <img src="./images/logo.svg" alt="Logo">
         </a>
         <!-- Desktop Navigation Menu -->
-        <!-- <ul class="desktop-nav-menu">
-          <li class="desktop-nav-item"><a class="desktop-nav-link" href="#">Features</a></li>
-          <li class="desktop-nav-item"><a class="desktop-nav-link" href="#">Company</a></li>
-          <li class="desktop-nav-item"><a class="desktop-nav-link" href="#">Careers</a></li>
-          <li class="desktop-nav-item"><a class="desktop-nav-link" href="#">About</a></li>
-        </ul> -->
+        <ul class="desktop-nav-menu">
+          <li class="desktop-nav-item">
+            <a class="desktop-nav-link" href="#">
+              Features 
+              <img class="dropdown-arrow" src="./images/icon-arrow-down.svg">
+            </img>
+          </a>
+          </li>
+          <li class="desktop-nav-item">
+            <a class="desktop-nav-link" href="#">
+              Company
+              <img class="dropdown-arrow" src="./images/icon-arrow-down.svg"></img>
+            </a>
+          </li>
+          <li class="desktop-nav-item">
+            <a class="desktop-nav-link" href="#">Careers</a>
+          </li>
+          <li class="desktop-nav-item">
+            <a class="desktop-nav-link" href="#">About</a>
+          </li>
+          <li>
+            <a class="login-btn link" href="#">Login</a>
+          </li>
+          <li>
+            <a class="register-btn link" href="#">Register</a>
+          </li>
+        </ul>
         <!-- Mobile Navigation Menu -->
         <ul class="nav-menu">
           <li class="nav-item">
-            <a class="nav-link" href="#">Features <img class="dropdown-arrow" src="./images/icon-arrow-down.svg"></img> </a>
-            <ul class="nav-dropdown-list">
-              <li class="nav-dropdown-list-li-with-icon">
+            <a id="features-dropdown" class="nav-link" href="#">Features <img id ="features-dropdown-arrow" class="dropdown-arrow" src="./images/icon-arrow-down.svg"></img> </a>
+            <ul id="features-dropdown-items" class="nav-dropdown-list hidden">
+              <li class="nav-dropdown-list-li-with-icon link">
                 <img class="dropdown-list-icon" src="./images/icon-todo.svg" alt="">
                 <a href="#">Todo List</a>
               </li>
-              <li class="nav-dropdown-list-li-with-icon">
+              <li class="nav-dropdown-list-li-with-icon link">
                 <img class="dropdown-list-icon" src="./images/icon-calendar.svg" alt="">
                 <a href="#">Calendar</a>
               </li>
-              <li class="nav-dropdown-list-li-with-icon">
+              <li class="nav-dropdown-list-li-with-icon link">
                 <img class="dropdown-list-icon" src="./images/icon-reminders.svg" alt="">
                 <a href="#">Reminders</a>
               </li>
-              <li class="nav-dropdown-list-li-with-icon">
+              <li class="nav-dropdown-list-li-with-icon link">
                 <img class="dropdown-list-icon" src="./images/icon-planning.svg" alt="">
                 <a href="#">Planning</a>
               </li>
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Company <img class="dropdown-arrow" src="./images/icon-arrow-down.svg"></img></a>
-            <ul class="nav-dropdown-list">
-              <li class="nav-dropdown-list-li">
+            <a id="company-dropdown" class="nav-link" href="#">Company <img id="company-dropdown-arrow" class="dropdown-arrow" src="./images/icon-arrow-down.svg"></img></a>
+            <ul id="company-dropdown-items" class="nav-dropdown-list hidden">
+              <li class="nav-dropdown-list-li link">
                 <a href="#">History</a>
               </li>
-              <li class="nav-dropdown-list-li">
+              <li class="nav-dropdown-list-li link">
                 <a href="#">Our Team</a>
               </li>
-              <li class="nav-dropdown-list-li">
+              <li class="nav-dropdown-list-li link">
                 <a href="#">Blog</a>
               </li>
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Careers</a>
+            <a class="nav-link link" href="#">Careers</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
+            <a class="nav-link link" href="#">About</a>
           </li>
-          <a class="login-btn" href="#">Login</a>
-          <a class="register-btn" href="#">Register</a>
+          <a class="login-btn link" href="#">Login</a>
+          <a class="register-btn link" href="#">Register</a>
         </ul>
         <!-- Hamburger Menu -->
         <div class="hamburger">

@@ -1,6 +1,34 @@
 const hamburger = document.querySelector(".hamburger")
 const navMenu = document.querySelector(".nav-menu")
 const overlay = document.querySelector(".grey-overlay")
+const featuresDropdown = document.querySelector("#features-dropdown")
+const featuresDropdownItems = document.querySelector("#features-dropdown-items")
+const companyDropdown = document.querySelector("#company-dropdown")
+const companyDropdownItems = document.querySelector("#company-dropdown-items")
+
+// Open close drop downs
+featuresDropdown.addEventListener('click', changeFeaturesDropdown)
+companyDropdown.addEventListener('click', changeCompanyDropdown)
+
+function changeFeaturesDropdown(){
+    featuresDropdownItems.classList.toggle('hidden')
+    if(featuresDropdownItems.classList.contains('hidden')){
+        document.querySelector("#features-dropdown-arrow").src="./images/icon-arrow-down.svg"
+    }
+    else{
+        document.querySelector("#features-dropdown-arrow").src="./images/icon-arrow-up.svg"  
+    }
+}
+function changeCompanyDropdown(){
+    companyDropdownItems.classList.toggle('hidden')
+    if(companyDropdownItems.classList.contains('hidden')){
+        document.querySelector("#company-dropdown-arrow").src="./images/icon-arrow-down.svg"
+    }
+    else{
+        document.querySelector("#company-dropdown-arrow").src="./images/icon-arrow-up.svg"  
+    }
+}
+
 
 // Toggles the active class on the hamburger menu and nav menu (displaying/hiding them)
 hamburger.addEventListener('click', () => {
@@ -28,8 +56,8 @@ overlay.addEventListener('click', ()=>{
 })
 
 // Adds the ability to hide the menu anytime a navigation link is clicked.
-document.querySelectorAll('.nav-link').forEach(n => {
-    n.addEventListener('click', () => {
+document.querySelectorAll('.link').forEach(link => {
+    link.addEventListener('click', () => {
         hamburger.classList.remove('active')
         navMenu.classList.remove('active')
         overlay.classList.add('opaque')
@@ -38,3 +66,4 @@ document.querySelectorAll('.nav-link').forEach(n => {
         }, 410)
     })
 })
+

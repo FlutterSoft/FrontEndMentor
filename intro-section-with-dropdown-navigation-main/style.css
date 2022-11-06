@@ -125,6 +125,9 @@ a{
     color: var(--clr-primary-400);
 }
 
+
+
+
 .login-btn{
     color: var(--clr-neutral-400);
     align-self: center;
@@ -174,18 +177,18 @@ a{
     position: fixed;
     z-index: 98;
     left: 100%;
-    top: 0px;
+    top: 0;
     gap: 0;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: flex-start;
     background: var(--clr-neutral-100);
     width: 70%;
     text-align: left;
     transition: 0.3s;
     height: 110%;
-    margin-top: -50px;
-    padding: 0;
+    margin-top: 0px;
+    padding: 80px 0;
 }
 
 .nav-item{
@@ -198,7 +201,7 @@ a{
 }
 
 .nav-item:nth-child(1){
-    margin-top: -100px;
+    /* margin-top: -100px; */
 }
 
 .nav-dropdown-list{
@@ -226,6 +229,9 @@ a{
     justify-self: center;
 }
 
+#features-dropdown-items{
+    display: block;
+}
 
 /* Helper class to make opaque */
 .opaque{
@@ -236,8 +242,9 @@ a{
 
 /* Helper class to hide */
 .hidden{
-    display: none;
+    display: none !important
 }
+
 
 .desktop-nav-menu{
     display: none;
@@ -254,7 +261,33 @@ a{
     }
     .desktop-nav-menu{
         display: flex;
+        justify-content: flex-start;
         gap: 2.5em;
+        color: var(--clr-neutral-400);
+        font-size: 0.8rem;
+        width: 100%;
+    }
+    .desktop-nav-item:nth-child(4){
+        width: 70%;
+    }
+    
+    .desktop-nav-link{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .login-btn{
+        justify-self: flex-end;
+        font-size: 0.8rem;
+    }
+    .register-btn{
+        justify-self: flex-end;
+        font-size: 0.8rem;
+        border-radius: 10px;
+    }
+    .dropdown-arrow{
+        
     }
     .desktop-nav-link{
         transition: 0.4s ease;

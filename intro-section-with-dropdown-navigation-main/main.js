@@ -2,31 +2,36 @@ const hamburger = document.querySelector(".hamburger")
 const navMenu = document.querySelector(".nav-menu")
 const overlay = document.querySelector(".grey-overlay")
 const featuresDropdown = document.querySelector("#features-dropdown")
-const featuresDropdownItems = document.querySelector("#features-dropdown-items")
 const companyDropdown = document.querySelector("#company-dropdown")
-const companyDropdownItems = document.querySelector("#company-dropdown-items")
 
-// Open close drop downs
-featuresDropdown.addEventListener('click', changeFeaturesDropdown)
-companyDropdown.addEventListener('click', changeCompanyDropdown)
+// Open/close drop downs
+featuresDropdown.addEventListener('click', function(){
+    changeDropdown("features")
+})
 
-function changeFeaturesDropdown(){
-    featuresDropdownItems.classList.toggle('hidden')
-    if(featuresDropdownItems.classList.contains('hidden')){
-        document.querySelector("#features-dropdown-arrow").src="./images/icon-arrow-down.svg"
+companyDropdown.addEventListener('click', function(){
+    changeDropdown("company")
+})
+
+// Open/close drop downs
+function changeDropdown(heading){
+    let dropdown = document.querySelector("#"+heading+"-dropdown-items")
+    let arrowToChange = "#"+heading+"-dropdown-arrow"
+    dropdown.classList.toggle('hidden')
+    if(dropdown.classList.contains('hidden')){
+        document.querySelector(arrowToChange).src="./images/icon-arrow-down.svg"
     }
     else{
-        document.querySelector("#features-dropdown-arrow").src="./images/icon-arrow-up.svg"  
+        document.querySelector(arrowToChange).src="./images/icon-arrow-up.svg"  
     }
 }
-function changeCompanyDropdown(){
-    companyDropdownItems.classList.toggle('hidden')
-    if(companyDropdownItems.classList.contains('hidden')){
-        document.querySelector("#company-dropdown-arrow").src="./images/icon-arrow-down.svg"
-    }
-    else{
-        document.querySelector("#company-dropdown-arrow").src="./images/icon-arrow-up.svg"  
-    }
+
+// Close dropdowns
+function closeDropdowns(heading){
+    let dropdown = document.querySelector("#"+heading+"-dropdown-items")
+    let arrowToChange = "#"+heading+"-dropdown-arrow"
+    dropdown.classList.add('hidden')
+    document.querySelector(arrowToChange).src="./images/icon-arrow-down.svg"
 }
 
 
@@ -46,6 +51,8 @@ hamburger.addEventListener('click', () => {
         overlay.classList.add('opaque')
         setTimeout(()=>{
             overlay.classList.add('hidden')
+            closeDropdowns("features")
+            closeDropdowns("company")
         }, 410)
     }
 })
@@ -63,6 +70,8 @@ document.querySelectorAll('.link').forEach(link => {
         overlay.classList.add('opaque')
         setTimeout(()=>{
             overlay.classList.add('hidden')
+            closeDropdowns("features")
+            closeDropdowns("company")
         }, 410)
     })
 })

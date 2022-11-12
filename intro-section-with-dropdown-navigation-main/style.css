@@ -13,6 +13,7 @@ body{
     font-size: 18px;
     font-family: 'Epilogue', sans-serif;
     font-weight: 500;
+    background-color: var(--clr-neutral-100);
 }
 
 main{
@@ -320,7 +321,6 @@ a{
     main{
         display: flex;
         gap: 100px;
-        /* justify-content: space-evenly; */
         align-items: center;
         min-height:fit-content;
         text-align: left;
@@ -361,4 +361,21 @@ a{
         border-radius: 10px;
         
     }
+
+    #desktop-features-dropdown-items, #desktop-company-dropdown-items{
+        position: absolute;
+        background-color: white;
+        box-shadow: 0px 0px 15px rgba(128, 128, 128, 0.27);
+        padding: 1.5em 2em;
+        margin-top: 1em;
+        left: 11vw;
+        border-radius: 8px;
+    }
+    #desktop-company-dropdown-items{
+        left: 21vw;
+    }
+    #desktop-features-dropdown-items a, #desktop-company-dropdown-items a{
+        font-size: 0.8rem;
+    }
+
 }

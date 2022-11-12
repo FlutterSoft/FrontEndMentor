@@ -3,11 +3,23 @@ const navMenu = document.querySelector(".nav-menu")
 const overlay = document.querySelector(".grey-overlay")
 const featuresDropdown = document.querySelector("#features-dropdown")
 const companyDropdown = document.querySelector("#company-dropdown")
+const desktopFeaturesDropdown = document.querySelector("#desktop-features-dropdown")
+const desktopCompanyDropdown = document.querySelector("#desktop-company-dropdown")
 
 // Open/close drop downs
 featuresDropdown.addEventListener('click', function(){
     changeDropdown("features")
 })
+desktopFeaturesDropdown.addEventListener('click', function(){
+    changeDesktopDropdown("features")
+    closeDesktopDropdowns("company")
+})
+desktopCompanyDropdown.addEventListener('click', function(){
+    changeDesktopDropdown("company")
+    closeDesktopDropdowns("features")
+
+})
+
 
 companyDropdown.addEventListener('click', function(){
     changeDropdown("company")
@@ -25,11 +37,28 @@ function changeDropdown(heading){
         document.querySelector(arrowToChange).src="./images/icon-arrow-up.svg"  
     }
 }
+function changeDesktopDropdown(heading){
+    let dropdown = document.querySelector("#desktop-"+heading+"-dropdown-items")
+    let arrowToChange = "#desktop-"+heading+"-dropdown-arrow"
+    dropdown.classList.toggle('hidden')
+    if(dropdown.classList.contains('hidden')){
+        document.querySelector(arrowToChange).src="./images/icon-arrow-down.svg"
+    }
+    else{
+        document.querySelector(arrowToChange).src="./images/icon-arrow-up.svg"  
+    }
+}
 
 // Close dropdowns
 function closeDropdowns(heading){
     let dropdown = document.querySelector("#"+heading+"-dropdown-items")
     let arrowToChange = "#"+heading+"-dropdown-arrow"
+    dropdown.classList.add('hidden')
+    document.querySelector(arrowToChange).src="./images/icon-arrow-down.svg"
+}
+function closeDesktopDropdowns(heading){
+    let dropdown = document.querySelector("#desktop-"+heading+"-dropdown-items")
+    let arrowToChange = "#desktop-"+heading+"-dropdown-arrow"
     dropdown.classList.add('hidden')
     document.querySelector(arrowToChange).src="./images/icon-arrow-down.svg"
 }
@@ -72,6 +101,8 @@ document.querySelectorAll('.link').forEach(link => {
             overlay.classList.add('hidden')
             closeDropdowns("features")
             closeDropdowns("company")
+            closeDesktopDropdowns("features")
+            closeDesktopDropdowns("company")
         }, 410)
     })
 })

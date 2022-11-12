@@ -368,11 +368,11 @@ a{
         box-shadow: 0px 0px 15px rgba(128, 128, 128, 0.27);
         padding: 1.5em 2em;
         margin-top: 1em;
-        left: 11vw;
+        left: unset;
         border-radius: 8px;
     }
     #desktop-company-dropdown-items{
-        left: 21vw;
+        left: unset;
     }
     #desktop-features-dropdown-items a, #desktop-company-dropdown-items a{
         font-size: 0.8rem;

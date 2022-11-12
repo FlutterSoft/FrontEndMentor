@@ -263,6 +263,9 @@ a{
 
 /* Media queries for desktop view */
 @media(min-width: 1024px){
+    a:hover{
+        opacity: 80%;
+    }
     /* Navigation */
     .hamburger{
         display: none;
@@ -351,15 +354,18 @@ a{
         text-align: left;
     }
     #learn-more-btn{
-        background-color: inherit;
-        color: var(--clr-neutral-400);
+        color: var(--clr-neutral-100);
+        background-color: var(--clr-neutral-700);
         align-self: flex-start;
         justify-self: flex-start;
         font-size: 1rem;
-        border: 1.5px solid var(--clr-neutral-400);
+        border: 1.5px solid var(--clr-neutral-700);
         width: 70%;
         border-radius: 10px;
-        
+    }
+    #learn-more-btn:hover{
+        background-color: inherit;
+        color: var(--clr-neutral-400);
     }
 
     #desktop-features-dropdown-items, #desktop-company-dropdown-items{

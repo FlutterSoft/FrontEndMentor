@@ -22,6 +22,10 @@ body{
     font-family: var(--ff-body);
 }
 
+main{
+    margin-bottom: 120px;
+}
+
 h1,h2,h3,h4,h5,h6{
     margin: 20px 0;
     line-height: 1em;
@@ -145,4 +149,28 @@ p{
     width: 100%;
     height: 1.5px;
     opacity: 30%;
+}
+
+.footer-nav-heading{
+    font-family: var(--ff-body);
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    color: var(--clr-neutral-400);
+    margin-bottom: 30px;
+}
+
+.footer-nav-list{
+    list-style: none;
+    margin-bottom: 50px;
+}
+.footer-nav-list li{
+    margin-top: 10px;
+}
+.footer-nav-list a{
+    text-decoration: none;
+    color: var(--clr-primary-600);
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.1em;
 }

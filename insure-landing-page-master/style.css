@@ -19,16 +19,30 @@
 
 body{
     font-size: 16px;
+    font-family: var(--ff-body);
 }
 
 h1,h2,h3,h4,h5,h6{
     margin: 20px 0;
     line-height: 1em;
 }
-h1{
-    font-size: 40px;
+
+h1, h2, h3, h4, h5, h6{
+    font-size: 43px;
     font-family: var(--ff-headings);
     font-weight: 400;
+}
+h5{
+    font-size: 38px;
+}
+h6{
+    font-size: 28px;
+    color: var(--clr-neutral-700);
+}
+
+p{
+    line-height: 1.75em;
+    margin: 25px 0;
 }
 
 .hero-img-mobile{
@@ -39,15 +53,96 @@ h1{
     display: none;
 }
 
-.section-dark{
+.section-dark, .section-light{
     background-color: var(--clr-primary-600);
     color: var(--clr-neutral-100);
     margin: 0;
     padding: 70px 30px;
     margin: auto;
     text-align: center;
-    background-image: url('./images/bg-pattern-intro-left-mobile.svg'), url('./images/bg-pattern-intro-right-mobile.svg');
+    background-image: url('./images/bg-pattern-intro-left-mobile.svg');
     background-repeat: no-repeat;
-    background-position: top left, bottom right;
+    background-position: top left;
+    position: relative;
+}
 
+.section-light{
+    background-color: var(--clr-neutral-100);
+    background: none;
+    color: var(--clr-neutral-700);
+}
+
+.section-light::before{
+    content: "";
+    display: block;
+    background-color: var(--clr-primary-600);
+    margin: 50px auto;
+    width: 150px;
+    height: 1.5px;
+    opacity: 30%;
+}
+
+.section-light p{
+    color: var(--clr-neutral-400);
+}
+
+.section-dark p{
+    opacity: 85%;
+}
+
+.section-box{
+    margin: 30px;
+    padding: 40px 20px;
+    background-image: url('./images/bg-pattern-how-we-work-mobile.svg');
+    background-position: top right;
+
+}
+
+
+.infographic-img{
+    margin: 50px auto 25px auto;
+}
+
+
+#bg-pattern-intro-right-mobile{
+    position: absolute;
+    bottom:-180px;
+    right: 0;
+}
+
+.btn{
+    border: 2px solid var(--clr-neutral-100);
+    display: inline-block;
+    padding: 1em 2em;
+    margin: 20px;
+    color: inherit;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-size: 12px;
+}
+
+.footer{
+    background-color: var(--clr-neutral-100);
+    background-image: url('./images/bg-pattern-footer-mobile.svg');
+    background-repeat: no-repeat;
+}
+.footer::before{
+    display: none;
+}
+
+.social-links{
+    display: flex;
+    margin: 30px;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-nav::before{
+    content: "";
+    display: block;
+    background-color: var(--clr-primary-300);
+    margin: 50px auto;
+    width: 100%;
+    height: 1.5px;
+    opacity: 30%;
 }

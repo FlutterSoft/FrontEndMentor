@@ -2,6 +2,8 @@
 const $ = document.querySelector.bind( document );const hamburger = $('.hamburger')
 const nav = $('.main-nav')
 const body = $('body')
+const navLinks = document.querySelectorAll('.nav-link')
+
 
 hamburger.addEventListener('click', toggleNav )
 
@@ -19,3 +21,7 @@ function toggleNav(){
 
     }
 }
+navLinks.forEach(link => {
+    link.addEventListener('click', toggleNav)
+
+})

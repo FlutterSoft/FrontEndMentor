@@ -75,7 +75,9 @@ p{
     width: 100vw;
     z-index: 99;
     transition: all 200ms;
-
+    background-image: url('./images/bg-pattern-mobile-nav.svg');
+    background-repeat: no-repeat;
+    background-position: 0px 60vh;
 }
 .active{
     /* position:fixed; */
@@ -128,7 +130,7 @@ p{
     background-color: var(--clr-primary-600);
     color: var(--clr-neutral-100);
     margin: 0;
-    padding: 70px 30px;
+    padding: 80px 30px;
     margin: auto;
     text-align: center;
     background-image: url('./images/bg-pattern-intro-left-mobile.svg');

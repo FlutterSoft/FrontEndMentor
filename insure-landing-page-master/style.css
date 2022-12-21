@@ -185,6 +185,7 @@ a:hover{
     background-image: url('./images/bg-pattern-how-we-work-mobile.svg');
     background-position: top right;
     margin-bottom: 100px !important;
+    margin-top: 100px !important;
 }
 
 
@@ -221,6 +222,10 @@ a:hover{
     background-image: url('./images/bg-pattern-footer-mobile.svg');
     background-repeat: no-repeat;
     padding: 0 !important;
+    padding-bottom: 60px !important;
+}
+.footer-heading{
+    padding: 50px 0 0 0;
 }
 .footer::before{
     display: none;
@@ -466,11 +471,11 @@ a:hover{
         margin: auto;
         background-color: var(--clr-neutral-100);
     }
-    .flex-between{
+    .footer-heading{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0 30px;
+        padding: 30px 30px 0 30px;
     }
     .footer-nav::before{
         display: none;
@@ -502,12 +507,16 @@ a:hover{
         content: "";
         display: block;
         background-color: var(--clr-primary-600);
-        margin: 50px 30px;
+        margin: 0 30px 30px 30px;
         padding: 0 20px;
         /* width: 100%; */
         height: 1px;
         opacity: 15%;
     }
+}
+
+.footer-end{
+
 }
 
 @media screen and (min-width: 900px) {

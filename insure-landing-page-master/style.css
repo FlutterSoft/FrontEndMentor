@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
 
+/* ---------------------------------------- */
+/* ---------- CSS VARIABLES ---------- */
+/* ---------------------------------------- */
 :root{
     --clr-primary-600: hsl(256, 26%, 20%);
     --clr-primary-300: hsl(216, 30%, 68%);
@@ -15,6 +18,10 @@
     margin: 0;
     padding: 0;
 }
+
+/* ---------------------------------------- */
+/* ---------- BASE ---------- */
+/* ---------------------------------------- */
 
 body{
     font-size: 16px;
@@ -35,9 +42,11 @@ h1, h2, h3, h4, h5, h6{
     font-family: var(--ff-headings);
     font-weight: 400;
 }
+
 h5{
     font-size: 38px;
 }
+
 h6{
     font-size: 28px;
     color: var(--clr-neutral-700);
@@ -51,6 +60,10 @@ p{
 a:hover{
     color: var(--clr-neutral-700);
 }
+
+/* ---------------------------------------- */
+/* ---------- HELPER CLASSES ---------- */
+/* ---------------------------------------- */
 .position-fixed{
     position: fixed;
 }
@@ -69,11 +82,58 @@ a:hover{
     align-items: center;
 }
 
+.hidden{
+    display: none;
+}
+
+.active{
+    left: 0% !important;
+    transition: all 200ms;
+}
+
+/* ---------------------------------------- */
+/* ---------- STYLING ---------- */
+/* ---------------------------------------- */
+
 .logo{
     width: 120px;
     height: fit-content;
 }
 
+#bg-pattern-intro-left-desktop{
+    display: none;
+}
+#bg-pattern-intro-right-desktop{
+    display: none;
+}
+
+#bg-pattern-intro-right-mobile{
+    position: absolute;
+    bottom:-180px;
+    right: 0;
+}
+
+.btn{
+    border: 2px solid var(--clr-neutral-100);
+    display: inline-block;
+    padding: 1em 2em;
+    margin: 20px;
+    color: inherit;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-size: 12px;
+}
+
+.btn:hover{
+    background-color: var(--clr-neutral-100);
+    color: var(--clr-neutral-700);
+}
+
+
+
+/* ---------------------------------------- */
+/* ---------- NAVIGATION ---------- */
+/* ---------------------------------------- */
 
 .main-nav{
     position: fixed;
@@ -88,19 +148,13 @@ a:hover{
     background-repeat: no-repeat;
     background-position: 100% 75%;
 }
-.active{
-    left: 0% ;
-    transition: all 200ms;
-}
 
-.hidden{
-    display: none;
-}
 .nav-list{
     list-style: none;
     margin: auto;
     text-align: center;
 }
+
 .nav-link{
     text-decoration: none;
     color: var(--clr-neutral-100);
@@ -109,9 +163,11 @@ a:hover{
     letter-spacing: 2px;
     font-size: 18px;
 }
+
 .nav-list-item{
     margin-top: 25px;
 }
+
 .nav-link.btn{
     color: var(--clr-neutral-100);
     padding: 0.8em 5em;
@@ -124,16 +180,13 @@ a:hover{
     color: var(--clr-neutral-100) ;
 }
 
-#bg-pattern-intro-left-desktop{
-    display: none;
-}
-#bg-pattern-intro-right-desktop{
-    display: none;
-}
 .hamburger{
     cursor: pointer;
 }
 
+/* ---------------------------------------- */
+/* ---------- HERO SECTION ---------- */
+/* ---------------------------------------- */
 
 .hero-img-mobile{
     width: 100%;
@@ -142,6 +195,10 @@ a:hover{
 .hero-img-desktop{
     display: none;
 }
+
+/* ---------------------------------------- */
+/* ---------- MAIN SECTIONS ---------- */
+/* ---------------------------------------- */
 
 .section-dark, .section-light{
     background-color: var(--clr-primary-600);
@@ -188,34 +245,13 @@ a:hover{
     margin-top: 100px !important;
 }
 
-
 .infographic-img{
     margin: 50px auto 25px auto;
 }
 
-
-#bg-pattern-intro-right-mobile{
-    position: absolute;
-    bottom:-180px;
-    right: 0;
-}
-
-.btn{
-    border: 2px solid var(--clr-neutral-100);
-    display: inline-block;
-    padding: 1em 2em;
-    margin: 20px;
-    color: inherit;
-    text-decoration: none;
-    letter-spacing: 3px;
-    font-size: 12px;
-}
-.btn:hover{
-    background-color: var(--clr-neutral-100);
-    color: var(--clr-neutral-700);
-}
-
-
+/* ---------------------------------------- */
+/* ---------- FOOTER ---------- */
+/* ---------------------------------------- */
 
 .footer{
     background-color: var(--clr-neutral-100);
@@ -224,9 +260,11 @@ a:hover{
     padding: 0 !important;
     padding-bottom: 60px !important;
 }
+
 .footer-heading{
     padding: 50px 0 0 0;
 }
+
 .footer::before{
     display: none;
 }
@@ -261,9 +299,11 @@ a:hover{
     list-style: none;
     margin-bottom: 50px;
 }
+
 .footer-nav-list li{
     margin-top: 10px;
 }
+
 .footer-nav-list a{
     text-decoration: none;
     color: var(--clr-primary-600);
@@ -272,30 +312,49 @@ a:hover{
     letter-spacing: 0.1em;
 }
 
-
+/* ---------------------------------------- */
+/* ---------- FOR DESKTOP ---------- */
+/* ---------------------------------------- */
  
 @media screen and (min-width: 650px){
     body{
         position: relative;
     }
-    /* NAV */
-   .hamburger{
+    .hamburger{
         display: none;
    }
+
+    main{
+        margin: auto;
+        position: relative;
+    }   
+
+    h1{
+        font-size: 62px;
+    }
+
+    h4{
+        font-size: 60px;
+        margin: 30px;
+    }
+
+    h5{
+        font-size: 48px;
+    }
+    /* ---------------------------------------- */
+    /* ---------- DESKTOP NAV ---------- */
+    /* ---------------------------------------- */
+
    .header{
     display: flex;
-    /* width: 100%; */
     justify-content: space-between;
     margin: auto;
     padding: 0 30px;
 
    }
+
    .flex-container{
         padding: 20px 0px;
-   }
-   main{
-    margin: auto;
-
    }
 
    .main-nav{
@@ -322,6 +381,7 @@ a:hover{
         justify-content: flex-end;
         gap: 20px;
     }
+
     .nav-link{
         text-decoration: none;
         color: var(--clr-neutral-400);
@@ -334,6 +394,7 @@ a:hover{
     .nav-list-item{
         margin-top: 0;
     }
+
     .nav-link.btn{
         color: var(--clr-neutral-700);
         padding: 0.35em 1.2em;
@@ -343,11 +404,7 @@ a:hover{
         display:inline;
         align-self: center;
     }
-    
-    /* MAIN */
-    main{
-        position: relative;
-    }
+
     .hero-img-mobile{
         display: none;
     }
@@ -370,13 +427,13 @@ a:hover{
     .section-hero{
         display: flex;
     }
+
     .dark-bg{
         background-color: var(--clr-primary-600);
         margin: auto;
         display: flex;
         justify-content: center;
     }
-
 
     .section-dark, .section-light{
         background-color: var(--clr-primary-600);
@@ -387,10 +444,11 @@ a:hover{
         background-image: none;
         width: 100%;
     }
+
     .section-hero-content{
         padding-right: 55%;
-
     }
+
     #bg-pattern-intro-right-mobile{
         display: none;
     }
@@ -403,6 +461,7 @@ a:hover{
         height: 300px;
         z-index: 99;
     }
+
     #bg-pattern-intro-right-desktop{
         display: block;
         position:absolute;
@@ -411,35 +470,34 @@ a:hover{
         height: 500px;
         z-index: 99;
     }
+
     .section-light{
         background-color: var(--clr-neutral-100);
         background: none;
         color: var(--clr-neutral-700);
         padding: 0;
-        /* padding: 20px; */
-
     }
+
     .btn{
         margin: 0 20px 0 0 ;
     }
 
     .section-light::before{
-        
         margin: 150px 0 50px 30px;
         height: 1.5px;
     }
+
     .infographic-img{
         margin: 50px auto 25px auto;
     }
+
     .infographic-container{
         display: flex;
         justify-content: space-evenly;
         gap: 50px;
         padding: 0 30px;
-    }    
-    .infographic{
+    }  
 
-    }
     .logo{
         margin: 0;
     }
@@ -453,39 +511,45 @@ a:hover{
         display: grid;
         grid-template-columns: 40% 60%;        
         align-items: center;
-        margin: auto;
-        
+        margin: auto;   
     }
+
     .section-box div{
         padding: 30px 30px;
     }
+
     .section-box div+div{
         justify-self: flex-end;
     }
 
+    /* ---------------------------------------- */
+    /* ---------- FOOTER ---------- */
+    /* ---------------------------------------- */
     .footer{
-        /* padding-left: 50px; */
         background-image: url('./images/bg-pattern-footer-desktop.svg');
         background-repeat: no-repeat;
         background-position: top left;
         margin: auto;
         background-color: var(--clr-neutral-100);
     }
+
     .footer-heading{
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 30px 30px 0 30px;
     }
+
     .footer-nav::before{
         display: none;
     }
+
     .footer-nav{
         display: flex;
         justify-content: space-between;
-        /* margin: auto; */
         padding: 0 30px;
     }
+
     .footer-nav a:hover{
         text-decoration: underline;
     }
@@ -493,32 +557,21 @@ a:hover{
     .social-link:hover{
         filter:brightness(20%);
     }
-    h1{
-        font-size: 62px;
-    }
-    h4{
-        font-size: 60px;
-        margin: 30px;
-    }
-    h5{
-        font-size: 48px;
-    }
+
     .footer-line{
         content: "";
         display: block;
         background-color: var(--clr-primary-600);
         margin: 0 30px 30px 30px;
         padding: 0 20px;
-        /* width: 100%; */
         height: 1px;
         opacity: 15%;
     }
 }
 
-.footer-end{
-
-}
-
+/* ---------------------------------------- */
+/* ---------- WHEN ENOUGH SPACE FOR EXTRA IMAGERY ---------- */
+/* ---------------------------------------- */
 @media screen and (min-width: 900px) {
     .hero-img-desktop{
         left: 50%;
@@ -528,6 +581,9 @@ a:hover{
     }
 }
 
+/* ---------------------------------------- */
+/* ---------- WHEN MAX WIDTH ---------- */
+/* ---------------------------------------- */
 @media screen and (min-width: 1300px){
     .btn{
         margin: 0;
@@ -538,6 +594,7 @@ a:hover{
         margin: 0;
         margin-left: 30px;
     }
+
     .header{
         padding: 0 30px;
     }

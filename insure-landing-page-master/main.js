@@ -4,9 +4,10 @@ const nav = $('.main-nav')
 const body = $('body')
 const navLinks = document.querySelectorAll('.nav-link')
 
-
+// Add function on click of hamburger icon
 hamburger.addEventListener('click', toggleNav )
 
+// Shows the mobile nav menu when hamburger is clicked (Only applies to screen size less than 650px as this is break point)
 function toggleNav(){
     if(window.innerWidth <= 650){
         if(nav.classList.contains('active')){
@@ -21,10 +22,8 @@ function toggleNav(){
             hamburger.src=("./images/icon-close.svg")
         }
     }
-
 }
+// Add nav toggle to each navigation link
 navLinks.forEach(link => {
-
     link.addEventListener('click', toggleNav)
-
 })

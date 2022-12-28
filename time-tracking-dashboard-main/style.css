@@ -27,8 +27,8 @@ body{
 }
 
 .user-card{
-    width: fit-content;
-    max-width: 240px;
+    /* width: fit-content; */
+    width: 240px;
     border-radius: 10px;
     background-color: var(--clr-neutral-600);
 }
@@ -74,5 +74,61 @@ h1{
 h2{
     font-size: 15px;
     font-weight: 300;
+    color: var(--clr-neutral-200);
+}
+
+.card-container{
+    padding-top: 40px;
+    border-radius: 10px;
+    width: 240px;
+    margin: 30px 0;
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+
+.work-card{
+    background-color: var(--clr-primary-orange);
+    background-image: url('./images/icon-work.svg');
+}
+.play-card{
+    background-color: var(--clr-primary-softblue);
+    background-image: url('./images/icon-play.svg');
+}
+.study-card{
+    background-color: var(--clr-primary-red);
+    background-image: url('./images/icon-study.svg');
+}
+.exercise-card{
+    background-color: var(--clr-primary-green);
+    background-image: url('./images/icon-exercise.svg');
+}
+.social-card{
+    background-color: var(--clr-primary-violet);
+    background-image: url('./images/icon-social.svg');
+}
+.self-care-card{
+    background-color: var(--clr-primary-yellow);
+    background-image: url('./images/icon-self-care.svg');
+}
+
+.card{
+    background-color: var(--clr-neutral-600);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+h6{
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.hours{
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.last-week{
+    font-size: 14px;
     color: var(--clr-neutral-200);
 }

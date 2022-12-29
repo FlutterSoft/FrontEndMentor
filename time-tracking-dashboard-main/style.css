@@ -19,6 +19,7 @@ body{
     background-color: var(--clr-neutral-700);
     color: white;
     font-weight: 200;
+    padding: 20px;
 }
 /* Titles are 18px */
 
@@ -26,9 +27,21 @@ body{
     display: none;
 }
 
+
+button{
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    cursor: pointer;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
 .user-card{
-    /* width: fit-content; */
-    width: 240px;
+    /* width: 240px; */
+    /* margin: 25px; */
     border-radius: 10px;
     background-color: var(--clr-neutral-600);
 }
@@ -36,10 +49,18 @@ body{
 .user-info{
     background-color: var(--clr-primary-blue);
     border-radius: 10px;
-    padding: 20px;
+    padding: 5px 20px;
+    display: flex;
+    align-items: center;
 }
+.user-info-text{
+    margin-left: 10px;
+}
+
 .frequency-selector{
     padding: 20px;
+    display: flex;
+    justify-content: space-around;
 }
 .frequency-selector-btn {
     margin: 12px 0;
@@ -65,22 +86,22 @@ body{
 }
 
 h1{
-    font-size: 40px;
+    font-size: 20px;
     font-weight: 300;
-    margin: 0;
-    margin-bottom: 50px;
+    margin: 5px 0;
 }
 
 h2{
     font-size: 15px;
     font-weight: 300;
     color: var(--clr-neutral-200);
+    margin: 5px 0;
 }
 
 .card-container{
     padding-top: 40px;
     border-radius: 10px;
-    width: 240px;
+    /* width: 240px; */
     margin: 30px 0;
     background-repeat: no-repeat;
     background-position: top right;

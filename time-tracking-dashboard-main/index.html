@@ -9,9 +9,8 @@
   <title>Frontend Mentor | Time tracking dashboard</title>
   <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="style.css">
-
-
 </head>
+
 <body>
   <main>
     <div class="user-card">
@@ -30,8 +29,8 @@
         <span id="selector-monthly" class="frequency-selector-btn block">Montly</span>
       </div>
     </div>
-
-    <div class="card-container work-card">
+    <div class="cards">
+<div class="card-container work-card">
       <div class="card">
         <div class="row">
           <h6 class="card-heading">Work</h6>
@@ -39,7 +38,7 @@
             <img class="ellipsis" src="./images/icon-ellipsis.svg" alt="">
           </button>
         </div>
-        <div class="row">
+        <div class="card-row">
           <span class="work-hours hours block">32hrs</span>
           <span class="work-last-week previous-hours block">Last Week - 36hrs</span> 
         </div>
@@ -53,7 +52,7 @@
             <img class="ellipsis" src="./images/icon-ellipsis.svg" alt="">
           </button>
         </div>
-        <div class="row">
+        <div class="card-row">
           <span class="play-hours hours block">10hrs</span>
           <span class="play-last-week previous-hours block">Last Week - 8hrs</span>
         </div>
@@ -67,7 +66,7 @@
             <img class="ellipsis" src="./images/icon-ellipsis.svg" alt="">
           </button>
         </div>
-        <div class="row">
+        <div class="card-row">
           <span class="study-hours hours block">4hrs</span>
           <span class="study-last-week previous-hours block">Last Week - 7hrs</span>
         </div>
@@ -81,7 +80,7 @@
             <img class="ellipsis" src="./images/icon-ellipsis.svg" alt="">
           </button>
         </div>
-        <div class="row">
+        <div class="card-row">
           <span class="exercise-hours hours block">4hrs</span>
           <span class="exercise-last-week previous-hours block">Last Week - 5hrs</span>
         </div>
@@ -95,7 +94,7 @@
             <img class="ellipsis" src="./images/icon-ellipsis.svg" alt="">
           </button>
         </div>
-        <div class="row">
+        <div class="card-row">
           <span class="social-hours hours block">5hrs</span>
           <span class="social-last-week previous-hours block">Last Week - 10hrs</span>
         </div>
@@ -109,72 +108,15 @@
             <img class="ellipsis" src="./images/icon-ellipsis.svg" alt="">
           </button>
         </div>
-        <div class="row">
+        <div class="card-row">
           <span class="self-care-hours hours block">2hrs</span>
           <span class="self-care-last-week previous-hours block">Last Week - 2hrs</span>
         </div>
       </div>
     </div>
+    </div>
+    
   </main>
-
-
-<!--   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div> -->
-  <div class="hidden">
-
-  Work
-  5hrs <!-- daily -->
-  Previous - 7hrs <!-- daily -->
-  32hrs <!-- weekly -->
-  Previous - 36hrs <!-- weekly -->
-  103hrs <!-- monthly -->
-  Previous - 128hrs <!-- monthly -->
-
-  Play
-  1hr <!-- daily -->
-  Previous - 2hrs <!-- daily -->
-  10hrs <!-- weekly -->
-  Previous - 8hrs <!-- weekly -->
-  23hrs <!-- monthly -->
-  Previous - 29hrs <!-- monthly -->
-
-  Study
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 7hrs <!-- weekly -->
-  13hrs <!-- monthly -->
-  Previous - 19hrs <!-- monthly -->
-
-  Exercise
-  1hr <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 5hrs <!-- weekly -->
-  11hrs <!-- monthly -->
-  Previous - 18hrs <!-- monthly -->
-
-  Social
-  1hr <!-- daily -->
-  Previous - 3hrs <!-- daily -->
-  5hrs <!-- weekly -->
-  Previous - 10hrs <!-- weekly -->
-  21hrs <!-- monthly -->
-  Previous - 23hrs <!-- monthly -->
-
-  Self Care
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  2hrs <!-- weekly -->
-  Previous - 2hrs <!-- weekly -->
-  7hrs <!-- monthly -->
-  Previous - 11hrs monthly
-
-  </div>
-
   <script src="main.js"></script>
 </body>
 

@@ -4,15 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="style.css">
   <title>Frontend Mentor | Sunnyside agency landing page</title>
 </head>
 <body>
   <!-- HEADER -->
-  <header>
-    <img src="./images/logo.svg" alt="" class="logo">
+  <header class="header">
     <!-- NAV -->
     <nav class="main-nav">
+      <div class="row">
+        <img src="./images/logo.svg" alt="" class="logo">
+        <img src="./images/icon-hamburger.svg" alt="">
+      </div>
+
       <ul class="nav-list">
         <li class="nav-item">
           <a class="nav-link" href="#">About</a>
@@ -28,16 +33,16 @@
         </li>
       </ul>
     </nav>
-  </header>
-
-  <main>
   <!-- HERO SECTION -->
   <section class="hero">
     <h1>
       We are creatives
     </h1>
+    <img class="img arrow-down" src="./images/icon-arrow-down.svg" alt="">
   </section>
-  
+  </header>
+  <main>
+
   <!-- SECTION -->
   <section class="section-container">
     <picture>
@@ -45,7 +50,7 @@
     </picture>
     <section class="content-section">
       <h2>Transform your brand</h2>
-      <p>
+      <p class="light-p">
         We are a full-service creative agency specializing in helping brands grow fast. 
         Engage your clients through compelling visuals that do most of the marketing for you.
       </p>
@@ -59,14 +64,14 @@
     </picture>
     <section class="content-section">
       <h2>Stand out to the right audience</h2>
-      <p>
+      <p class="light-p">
         Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we'll build and extend your brand in digital places. 
       </p>
-      <a class="learn-more" href="#">Learn more</a>
+      <a class="learn-more red" href="#">Learn more</a>
     </section>
   </section>
   <!-- SECTION -->
-  <section class="section-container">
+  <section class="section-container graphic-section">
     <section class="content-section">
       <h2>Graphic design</h2>
       <p>

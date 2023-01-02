@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500;600&display=swap');
+
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap');
 
 :root{
@@ -25,4 +26,110 @@
 body{
     font-size: 18px;
     font-family: var(--ff-body);
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.img{
+    max-width: 100%;
+}
+
+.learn-more{
+    display: block;
+    text-decoration: none;
+    color: var(--clr-neutral-700);
+    font-family: var(--ff-header);
+    font-size: 16px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin: 40px auto;
+}
+
+.learn-more::after{
+    content: "";
+    display: block;
+    height: 10px;
+    width: 9em;
+    margin: 0 auto;
+    margin-top: -5px;
+    background-color: var(--clr-primary-yellow);
+    filter: blur(1px);
+    opacity: 20%;
+    border-radius: 10px;
+}
+
+.red::after{
+    background-color: var(--clr-primary-red);
+
+}
+.header{
+    background-image: url('./images/mobile/image-header.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px;
+    
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: var(--ff-header);
+    text-align: center;
+    font-weight: 900;
+}
+h1{
+    color: var(--clr-neutral-100);
+    text-transform: uppercase;
+    font-size: 40px;
+    letter-spacing: 5px;
+
+}
+
+h2{
+    color: var(--clr-neutral-700);
+    margin-bottom: 40px;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+p{
+    font-family: var(--ff-body);
+    font-weight: 500;
+    line-height: 1.5em;
+}
+
+.light-p{
+    color: var(--clr-neutral-400);
+}
+
+.nav-list{
+    list-style: none;
+    display: none;
+}
+.nav-link{
+    text-decoration: none;
+    color: var(--clr-neutral-300);
+}
+
+
+.hero{
+    margin: 80px auto;
+    text-align: center;
+}
+
+.arrow-down{
+    margin-top: 30px;
+}
+
+.content-section{
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.graphic-section{
+    background-image: url('./images/mobile/image-graphic-design.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 90%;
 }

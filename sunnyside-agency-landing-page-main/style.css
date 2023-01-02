@@ -69,7 +69,8 @@ body{
     background-image: url('./images/mobile/image-header.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 20px;
+    padding: 30px;
+    min-height: 50vh;
     
 }
 
@@ -91,6 +92,15 @@ h2{
     margin-bottom: 40px;
     font-size: 30px;
     font-weight: 900;
+}
+
+h3{
+    text-transform: uppercase;
+    color: var(--clr-neutral-300);
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    font-size: 19px;
+    margin: 60px auto;
 }
 
 p{
@@ -120,6 +130,7 @@ p{
 
 .arrow-down{
     margin-top: 30px;
+    margin-bottom: 50px;
 }
 
 .content-section{
@@ -127,9 +138,82 @@ p{
     text-align: center;
 }
 
-.graphic-section{
-    background-image: url('./images/mobile/image-graphic-design.jpg');
+.section-with-background{
     background-repeat: no-repeat;
     background-size: cover;
     padding-top: 90%;
+}
+.graphic-section{
+    background-image: url('./images/mobile/image-graphic-design.jpg');
+    color: var(--clr-primary-graphic-text);
+}
+
+.photography-section{
+    background-image: url('./images/mobile/image-photography.jpg');
+    color: var(--clr-primary-photo-text);
+}
+
+.testimonial{
+    margin: auto;
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 20px;
+}
+.client-img{
+    width: 80px;
+    border-radius: 50%;
+}
+
+.client-name{
+    display: block;
+    font-family: var(--ff-header);
+    color: var(--clr-neutral-700);
+    margin-top: 25px;
+}
+
+.client-position{
+    display: block;
+    color: var(--clr-neutral-300);
+    font-size: 16px;
+    margin: 14px auto;
+    font-weight: 700;
+}
+
+.gallery-mobile{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.footer{
+    background-color: rgb(159, 210, 197);
+    color: var(--clr-primary-footer);
+    text-align: center;
+    padding-bottom: 100px;
+}
+
+.footer-nav-list{
+    list-style: none;
+    display: flex;
+    margin: 80px auto;
+    justify-content: space-evenly;
+    padding: 0;
+}
+
+.footer-nav-link{
+    color: var(--clr-primary-footer);
+    text-decoration: none;
+}
+
+.social-links{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    width: 75%;
+    margin: 80px auto;
+    padding: 0;
+}
+
+.footer-logo{
+    margin: 100px auto 0 auto;
 }

@@ -1,6 +1,13 @@
 const hamburger = document.querySelector(".hamburger-btn")
 const mobileMenu = document.querySelector(".nav-list")
 
+const navLinks = document.querySelectorAll('.nav-link')
+
+// Add nav toggle to each navigation link
+navLinks.forEach(link => {
+    link.addEventListener('click', toggleNav)
+})
+
 hamburger.addEventListener('click', toggleNav)
 
 

@@ -22,3 +22,8 @@ function toggleNav(){
         }
     }
 }
+
+if(window.innerWidth >= 650){
+    mobileMenu.classList.remove('menu-closed')
+}
+    

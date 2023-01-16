@@ -79,7 +79,6 @@ body{
     background-size: cover;
     padding: 30px;
     min-height: 50vh;
-    
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -125,7 +124,6 @@ p{
     display: block;
     margin-top: 30px;
     list-style: none;
-    /* display: none; */
     background-color: var(--clr-neutral-100);
     text-align: center;
     display: flex;
@@ -139,7 +137,6 @@ p{
     width: 90%;
     left: 5%;
     right: 5%;
-
 }
 
 .nav-list::after{
@@ -277,4 +274,49 @@ p{
 
 .footer-logo{
     margin: 100px auto 0 auto;
+}
+
+@media screen and (min-width: 650px){
+    .hamburger-btn{
+        display: none;
+    }
+    .header{
+        background-image: url('./images/desktop/image-header.jpg');
+        background-position: center;
+    }
+    .nav-list{
+        display: block;
+        margin-top: unset;
+        background-color: unset;
+        text-align: unset;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        min-height: unset;
+        gap: 50px;
+        position: unset;
+        transition: all 400ms;
+        width: 90%;
+        left:unset ;
+        right: unset;
+        margin: 0;
+        padding: 0;
+    }
+    .desktop-header{
+        display: flex;
+        align-items: center;
+    }
+    .nav-list::after{
+        display: none;
+    }
+    .nav-link{
+        color: var(--clr-neutral-100);
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    .contact{
+        background-color: var(--clr-neutral-100);
+        color: var(--clr-neutral-600);
+    }
 }

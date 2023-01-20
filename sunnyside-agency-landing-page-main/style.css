@@ -371,4 +371,16 @@ p{
         background-image: url('./images/desktop/image-photography.jpg');
         color: var(--clr-primary-photo-text);
     }
+    .testimonials-container{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width: 1400px;
+        /* align-items: flex-start; */
+        margin: auto;
+
+    }
+    .testimonial{
+        max-width: 400px;
+    }
 }

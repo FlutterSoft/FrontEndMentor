@@ -62,11 +62,21 @@ body{
     filter: blur(1px);
     opacity: 20%;
     border-radius: 10px;
+    transition: all 200ms;
+}
+
+.learn-more:hover::after{
+    opacity: 80%;
+    transition: all 200ms;
+    
 }
 
 .red::after{
     background-color: var(--clr-primary-red);
-
+}
+.red:hover::after{
+    opacity: 80%;
+    transition: all 200ms;
 }
 
 .hamburger-btn{
@@ -322,6 +332,10 @@ p{
         background-color: var(--clr-neutral-100);
         color: var(--clr-neutral-600);
     }
+    .contact:hover{
+        color: var(--clr-neutral-100);
+        background-color: rgb(152, 221, 255);
+    }
     .mobile-img{
         display: none;
     }
@@ -361,7 +375,7 @@ p{
         display: flex;
         flex-direction: column;
         min-height: 500px;
-        padding-top: 40%;
+        padding-top: 60%;
         padding-bottom: 50px;
     }
     .imagery-content-section{
@@ -403,6 +417,12 @@ p{
 
         max-width: 200px;
 
+    }
+    .footer-nav-link:hover{
+        color: var(--clr-neutral-100);
+    }
+    .social-link img:hover{
+        filter:brightness(100) !important;
     }
     .max-width{
         max-width: 1440px;

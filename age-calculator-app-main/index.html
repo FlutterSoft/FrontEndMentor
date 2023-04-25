@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Age calculator app</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <section class="calculator-container">
+      <form id="form" action="#" novalidate >
+        <div class="inputs-container">
+          <div class="input-container">
+            <label for="day">DAY</label>
+            <input class="form-input" type="number" name="day" id="day" min="1" max="31" placeholder="DD" required title="hiii">  
+            <span class="invalid-message hidden">This field is required</span>
+          </div>
+          <div class="input-container">
+            <label for="day">MONTH</label>
+            <input class="form-input" type="number" name="month" id="month" min="1" max="12" placeholder="MM" required> 
+            <span class="invalid-message hidden">This field is required</span>
+          </div>
+          <div class="input-container">
+            <label for="day">YEAR</label>
+            <input class="form-input" type="number" name="year" id="year" min="1900" max="2023" placeholder="YYYY" required>  
+            <span class="invalid-message hidden">This field is required</span>
+          </div>
+        </div>
+        <div class="submit-container">
+          <div class="line"></div>
+          <input id="submit-btn" type="submit" value="">
+        </div>
+      </form>
+      <section class="results-container">
+        <h2 class="results-container__stat"><span class="results-container__stat-dash" id="years-display">--</span><span >years</span></h2>
+        <h2 class="results-container__stat"><span class="results-container__stat-dash" id="months-display">--</span><span >months</span></h2>
+        <h2 class="results-container__stat"><span class="results-container__stat-dash" id="days-display">--</span><span >days</span></h2>
+      </section>
+      
+    </section>
+  </main>
+
+<!-- 
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+  <script src="main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+</body>
+</html>
